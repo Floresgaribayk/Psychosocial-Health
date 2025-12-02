@@ -99,9 +99,60 @@ color: #555;
 <a href="#" onclick="showPage('Citations')">Citations</a>
 </nav>
 
-<div id="home" class="page active">
-<h2>Welcome</h2>
-<p>Cats test</p>
+  <!-- ⭐ QUIZ STARTS HERE -->
+  <div class="quiz-container">
+    <h2>Compassion Knowledge Quiz</h2>
+    <p>Test what you know about the psychosocial benefits of compassion!</p>
+
+    <form id="compassionQuiz">
+
+      <!-- Question 1 -->
+      <div class="question">
+        <p><strong>1. Compassion can help lower which stress hormone?</strong></p>
+        <label><input type="radio" name="q1" value="cortisol"> Cortisol</label><br>
+        <label><input type="radio" name="q1" value="adrenaline"> Adrenaline</label><br>
+        <label><input type="radio" name="q1" value="insulin"> Insulin</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p><strong>2. Compassion increases feelings of psychological:</strong></p>
+        <label><input type="radio" name="q2" value="connection"> Connection</label><br>
+        <label><input type="radio" name="q2" value="isolation"> Isolation</label><br>
+        <label><input type="radio" name="q2" value="fear"> Fear</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p><strong>3. Practicing compassion can improve overall:</strong></p>
+        <label><input type="radio" name="q3" value="wellbeing"> Well-being</label><br>
+        <label><input type="radio" name="q3" value="conflict"> Conflict</label><br>
+        <label><input type="radio" name="q3" value="stress"> Stress</label>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <p><strong>4. Compassion activates which brain system?</strong></p>
+        <label><input type="radio" name="q4" value="reward"> Reward system</label><br>
+        <label><input type="radio" name="q4" value="fight"> Fight-or-flight system</label><br>
+        <label><input type="radio" name="q4" value="motor"> Motor cortex</label>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <p><strong>5. People who practice compassion regularly often experience:</strong></p>
+        <label><input type="radio" name="q5" value="low-anxiety"> Lower anxiety</label><br>
+        <label><input type="radio" name="q5" value="high-stress"> Higher chronic stress</label><br>
+        <label><input type="radio" name="q5" value="less-regulation"> Less emotional regulation</label>
+      </div>
+
+      <button type="button" onclick="checkQuiz()">Submit</button>
+    </form>
+
+    <p id="quizResult" class="result"></p>
+  </div>
+  <!-- ⭐ QUIZ ENDS HERE -->
+
 </div>
 
 <div id="podcast" class="page">
@@ -204,6 +255,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 </body>
 
 </html>
+
 
 
 

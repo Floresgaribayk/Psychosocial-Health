@@ -54,7 +54,6 @@
     display: block;
   }
 
-  /* Footer */
   footer {
     text-align: center;
     padding: 15px;
@@ -64,16 +63,13 @@
     color: #555;
   }
 
-  /* Tiny images */
   img.tiny-img {
-    width: 300px;
-    max-width: 100%;
+    width: 500px;
     height: auto;
     display: block;
     margin: 0 auto;
   }
 
-  /* Section images */
   img.section-img {
     width: 50%;
     max-width: 400px;
@@ -84,7 +80,7 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   }
 
-  /* Quiz styling */
+  /* QUIZ STYLING */
   .quiz-container {
     background: #eef2ff;
     border: 2px solid #c7d2fe;
@@ -128,7 +124,7 @@
     text-align: center;
   }
 
-  /* Mini cards styling (pretty version) */
+  /* MINI CARDS STYLING */
   .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -165,14 +161,13 @@
     color: #4a148c;
   }
 
-  /* Citation style */
+  /* CITATIONS */
   .citation {
     margin-left: 0;
     padding-left: 20px;
     text-indent: -20px;
     line-height: 1.5;
   }
-
 </style>
 </head>
 
@@ -192,7 +187,7 @@
   <a href="#" onclick="showPage('citations')">Citations</a>
 </nav>
 
-<!-- HOME / QUIZ -->
+<!-- HOME PAGE -->
 <div id="home" class="page active">
   <h2>Welcome</h2>
   <div class="quiz-container">
@@ -238,13 +233,13 @@
   </div>
 </div>
 
-<!-- PODCAST -->
+<!-- PODCAST PAGE -->
 <div id="podcast" class="page">
   <h2>Podcast</h2>
   <p>Cats test pg 2</p>
 </div>
 
-<!-- ABOUT -->
+<!-- ABOUT PAGE -->
 <div id="about" class="page">
   <h2>About</h2>
   <p>This site explores how compassion can affect physical health.</p>
@@ -254,59 +249,56 @@
 <!-- PEER-REVIEWED ARTICLES -->
 <div id="peer" class="page">
   <h2>Peer-Reviewed Articles</h2>
-  <ul>
-    <li><strong>Pending...</strong> Under Construction</li>
-    <li><strong>Pending...</strong> Under Construction</li>
-    <li><strong>Pending...</strong> Under Construction</li>
-  </ul>
+  <div class="card-container">
 
-  <img src="9471.png" alt="Doctor checking patient's blood pressure" class="section-img" />
+    <div class="card">
+      <div class="card-title">Compassion and Mental Health: A Neurobiological Perspective</div>
+      <p>This study examines how compassion affects mental health from a neurobiological standpoint. Findings suggest that higher levels of compassion are linked to improved emotional regulation and resilience.</p>
+      <p><strong>Journal:</strong> Nature</p>
+      <p><strong>Link:</strong> <a href="https://www.nature.com/articles/s41398-021-01491-8" target="_blank">Read Article</a></p>
+    </div>
 
-  <h3>Explore These Studies:</h3>
-  <ul>
-    <li><a href="https://www.nature.com/articles/s41398-021-01491-8" target="_blank">Compassion and Mental Health: A Neurobiological Perspective (Nature)</a></li>
-    <li><a href="https://link.springer.com/article/10.1007/s12529-020-09886-5" target="_blank">The Impact of Compassion on Physiological Health (Springer)</a></li>
-    <li><a href="https://www-sciencedirect-com.ezproxy.library.unlv.edu/science/article/pii/S0022103110000934?via%3Dihub" target="_blank">Compassion and Stress Recovery Mechanisms (ScienceDirect)</a></li>
-  </ul>
+    <div class="card">
+      <div class="card-title">The Impact of Compassion on Physiological Health</div>
+      <p>Investigates how compassion influences physiological health markers such as blood pressure and stress response. Results support that compassion has measurable benefits for overall physical health.</p>
+      <p><strong>Journal:</strong> Springer</p>
+      <p><strong>Link:</strong> <a href="https://link.springer.com/article/10.1007/s12529-020-09886-5" target="_blank">Read Article</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Compassion and Stress Recovery Mechanisms</div>
+      <p>Explores mechanisms by which compassion helps in stress recovery. Demonstrates that compassion practice accelerates recovery from physiological stress.</p>
+      <p><strong>Journal:</strong> ScienceDirect</p>
+      <p><strong>Link:</strong> <a href="https://www-sciencedirect-com.ezproxy.library.unlv.edu/science/article/pii/S0022103110000934?via%3Dihub" target="_blank">Read Article</a></p>
+    </div>
+
+  </div>
 </div>
 
-<!-- SCIENTIFICALLY BASED WEBSITE -->
+<!-- SCIENTIFICALLY BASED WEBSITES -->
 <div id="science" class="page">
   <h2>Scientifically Based Websites</h2>
   <div class="card-container">
+
     <div class="card">
       <div class="card-title">Greater Good Science Center – UC Berkeley</div>
-      <p>
-        Compassion releases natural chemicals in the brain that reduce stress and improve mood.  
-        These effects support heart health, lower blood pressure, and promote emotional balance.  
-        Simple daily acts of kindness help create stronger relationships and better physical and mental well-being.
-      </p>
-      <p><strong>Website:</strong> Greater Good Science Center (UC Berkeley)</p>
+      <p>Compassion releases natural chemicals in the brain that reduce stress and improve mood. These effects support heart health, lower blood pressure, and promote emotional balance. Simple daily acts of kindness improve relationships and physical/mental well-being.</p>
+      <p><strong>Website:</strong> <a href="https://greatergood.berkeley.edu" target="_blank">Visit Website</a></p>
     </div>
 
     <div class="card">
       <div class="card-title">BMC Medical Education – Compassion in Healthcare Review</div>
-      <p>
-        This review studied compassion in healthcare between 2015–2020.  
-        Results show compassion improves patient care, increases satisfaction, and strengthens emotional well-being.  
-        Only a few studies tested training programs, showing a need for more structured compassion education.
-      </p>
-      <p><strong>Website:</strong> BMC Medical Education (Peer-Reviewed Journal)</p>
+      <p>This review studied compassion in healthcare between 2015–2020. Results show compassion improves patient care, increases satisfaction, and strengthens emotional well-being. Only a few studies tested training programs, showing a need for more structured compassion education.</p>
+      <p><strong>Website:</strong> <a href="https://bmcmededuc.biomedcentral.com/articles/10.1186/s12909-020-02204-3" target="_blank">Visit Website</a></p>
     </div>
 
-    <div class="card">
-      <div class="card-title">Compassion Research Lab</div>
-      <p>
-        The Compassion Research Lab focuses on understanding how compassion impacts mental and physical health, and implements strategies to increase compassion in communities.
-      </p>
-      <p><strong>Website:</strong> <a href="https://www.compassionresearchlab.com" target="_blank">Compassion Research Lab</a></p>
-    </div>
   </div>
 </div>
 
-<!-- CITATIONS -->
+<!-- CITATIONS PAGE -->
 <div id="citations" class="page">
   <h2>Citations</h2>
+
   <p class="citation">
     Cosley, B. J., McCoy, S. K., Saslow, L. R., & Epel, E. S. (2010).  
     Is compassion for others stress buffering? Consequences of compassion and social support for physiological reactivity to stress.  
@@ -354,10 +346,11 @@ function checkQuiz() {
   if (score === total) message = "Amazing! You understand compassion very well.";
   else if (score >= total - 1) message = "Great job! You know quite a bit.";
   else message = "Keep learning — compassion has many benefits!";
-
+  
   document.getElementById("quizResult").innerText = `You scored ${score}/${total}. ${message}`;
 }
 </script>
 
 </body>
 </html>
+

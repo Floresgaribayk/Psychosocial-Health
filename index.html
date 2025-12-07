@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The Physiological Health Benefits of Compassion</title>
@@ -63,11 +63,12 @@
     color: #555;
   }
 
-  img.tiny-img {
+  img.tiny-img, img.section-img {
     width: 500px;
+    max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 
   /* QUIZ STYLING */
@@ -151,16 +152,16 @@
     color: #4a148c;
   }
 
-  /* CITATION STYLING */
+  /* Citation styling */
   .citation {
     margin-left: 0;
     padding-left: 20px;
     text-indent: -20px;
     line-height: 1.5;
   }
-
 </style>
 </head>
+
 <body>
 
 <header>
@@ -173,13 +174,14 @@
   <a href="#" onclick="showPage('podcast')">Podcast</a>
   <a href="#" onclick="showPage('about')">About</a>
   <a href="#" onclick="showPage('peer')">Peer-Reviewed Articles</a>
-  <a href="#" onclick="showPage('science')">Scientifically Based Websites</a>
-  <a href="#" onclick="showPage('citations')">Citations</a>
+  <a href="#" onclick="showPage('science')">Scientifically Based Website</a>
+  <a href="#" onclick="showPage('Citations')">Citations</a>
 </nav>
 
 <!-- HOME PAGE -->
 <div id="home" class="page active">
   <h2>Welcome</h2>
+
   <div class="quiz-container">
     <h2>Compassion Knowledge Quiz</h2>
 
@@ -233,23 +235,28 @@
 <div id="about" class="page">
   <h2>About</h2>
   <p>This site explores how compassion can affect physical health.</p>
+  <img src="doctor-9628974.jpg" alt="Doctor comforting patient" class="section-img" />
 </div>
 
 <!-- PEER-REVIEWED ARTICLES PAGE -->
 <div id="peer" class="page">
   <h2>Peer-Reviewed Articles</h2>
+
+  <img src="9471.png" alt="Doctor checking patient's blood pressure" class="section-img" />
+
+  <h3>Explore These Studies:</h3>
   <ul>
-    <li><strong>Pending...</strong> Under Construction</li>
-    <li><strong>Pending...</strong> Under Construction</li>
-    <li><strong>Pending...</strong> Under Construction</li>
+    <li><a href="https://www.nature.com/articles/s41398-021-01491-8" target="_blank">Compassion and Mental Health: A Neurobiological Perspective (Nature)</a></li>
+    <li><a href="https://link.springer.com/article/10.1007/s12529-020-09886-5" target="_blank">The Impact of Compassion on Physiological Health (Springer)</a></li>
+    <li><a href="https://www-sciencedirect-com.ezproxy.library.unlv.edu/science/article/pii/S0022103110000934?via%3Dihub" target="_blank">Compassion and Stress Recovery Mechanisms (ScienceDirect)</a></li>
   </ul>
 </div>
 
-<!-- SCIENCE PAGE -->
+<!-- SCIENTIFICALLY BASED WEBSITE PAGE -->
 <div id="science" class="page">
   <h2>Scientifically Based Websites</h2>
-  <div class="card-container">
 
+  <div class="card-container">
     <div class="card">
       <div class="card-title">Greater Good Science Center – UC Berkeley</div>
       <p>
@@ -269,12 +276,11 @@
       </p>
       <p><strong>Website:</strong> BMC Medical Education (Peer-Reviewed Journal)</p>
     </div>
-
   </div>
 </div>
 
 <!-- CITATIONS PAGE -->
-<div id="citations" class="page">
+<div id="Citations" class="page">
   <h2>Citations</h2>
 
   <p class="citation">
@@ -286,7 +292,7 @@
 
   <p class="citation">
     Lee, E. E., Govind, T., Ramsey, M., Wu, T. C., Daly, R., Liu, J., Tu, X. M., Paulus, M. P., Thomas, M. L., & Jeste, D. V. (2021).  
-    Compassion toward others and self-compassion predict mental and physical well-being: A 5-year longitudinal study...  
+    Compassion toward others and self-compassion predict mental and physical well-being: A 5-year longitudinal study.  
     <em>Translational Psychiatry, 11</em>(1), 397–399.  
     <a href="https://doi.org/10.1038/s41398-021-01491-8" target="_blank">https://doi.org/10.1038/s41398-021-01491-8</a>
   </p>
@@ -313,19 +319,22 @@ function showPage(id) {
 
 function checkQuiz() {
   let score = 0;
-  const answers = {q1:"cortisol", q2:"connection", q3:"wellbeing", q4:"reward", q5:"low-anxiety"};
+  const answers = {q1:"cortisol",q2:"connection",q3:"wellbeing",q4:"reward",q5:"low-anxiety"};
   for (let q in answers) {
     const selected = document.querySelector(`input[name="${q}"]:checked`);
     if (selected && selected.value === answers[q]) score++;
   }
+
   const total = Object.keys(answers).length;
   let message = "";
   if (score === total) message = "Amazing! You understand compassion very well.";
   else if (score >= total - 1) message = "Great job! You know quite a bit.";
   else message = "Keep learning — compassion has many benefits!";
+
   document.getElementById("quizResult").innerText = `You scored ${score}/${total}. ${message}`;
 }
 </script>
 
 </body>
 </html>
+

@@ -218,13 +218,6 @@
     <button onclick="checkQuiz()">Submit Compassion Quiz</button>
     <p id="quizResult" class="result"></p>
   </div>
-
-  <!-- ⭐ Health Quiz -->
-  <h2>Quick Health Quiz</h2>
-  <div class="quiz2-container">
-    <div id="quiz2"></div>
-    <button onclick="submitQuiz2()">Submit Health Quiz</button>
-    <div id="result2"></div>
   </div>
 </div>
 
@@ -282,34 +275,5 @@ function checkQuiz() {
   else message="Keep learning — compassion has many benefits!";
   document.getElementById("quizResult").innerText = `You scored ${score}/${total}. ${message}`;
 }
-
-/* ---------------- Quiz 2 ---------------- */
-const quizData = [
-  {question:"1. What is the best way to reduce stress?", options:["A. Ignore everything","B. Deep breathing","C. Eating 10 donuts","D. Yelling at people"], answer:1},
-  {question:"2. How many hours of sleep should adults get?", options:["A. 2 hours","B. 4 hours","C. 7–9 hours","D. 15 hours"], answer:2},
-  {question:"3. Drinking water helps with…", options:["A. Hydration","B. Headaches","C. Focus","D. All of the above"], answer:3}
-];
-const quizContainer2=document.getElementById("quiz2");
-quizData.forEach((q,index)=>{
-  const block=document.createElement("div");
-  block.innerHTML=`<div class="quiz2-question">${q.question}</div>
-  ${q.options.map((opt,i)=>`<label class="option"><input type="radio" name="health${index}" value="${i}"> ${opt}</label>`).join("")}`;
-  quizContainer2.appendChild(block);
-});
-function submitQuiz2(){
-  let score=0;
-  document.querySelectorAll('.option').forEach(o=>o.classList.remove('correct','wrong'));
-  quizData.forEach((q,index)=>{
-    const selected=document.querySelector(`input[name="health${index}"]:checked`);
-    if(!selected) return;
-    const selectedIndex=parseInt(selected.value);
-    const optionDiv=selected.parentElement;
-    if(selectedIndex===q.answer){score++; optionDiv.classList.add("correct");}
-    else optionDiv.classList.add("wrong");
-  });
-  document.getElementById("result2").textContent=`You scored ${score} / ${quizData.length}`;
-}
-</script>
-
 </body>
 </html>

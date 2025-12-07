@@ -82,17 +82,18 @@
 
   /* QUIZ STYLING */
   .quiz-container {
-    background: #eef2ff;
+    background: #e6e6e6; /* light grey for Home page */
     border: 2px solid #c7d2fe;
     padding: 20px;
     margin: 20px auto;
     border-radius: 14px;
-    max-width: 550px;
+    max-width: 600px;
   }
 
   .quiz-container h2 {
     color: #4338ca;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   .question {
@@ -103,6 +104,14 @@
     border: 1px solid #dbeafe;
   }
 
+  .question em {
+    font-style: italic;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+    color: #555;
+  }
+
   button {
     background: #6366f1;
     color: white;
@@ -111,6 +120,9 @@
     border-radius: 6px;
     cursor: pointer;
     margin-top: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   button:hover {
@@ -161,10 +173,12 @@
     color: #4a148c;
   }
 
-  /* Welcome video styling */
-  .welcome-video {
-    margin: 20px auto;
-    max-width: 560px;
+  /* CITATIONS */
+  .citation {
+    margin-left: 0;
+    padding-left: 20px;
+    text-indent: -20px;
+    line-height: 1.5;
   }
 
 </style>
@@ -183,57 +197,52 @@
   <a href="#" onclick="showPage('about')">About</a>
   <a href="#" onclick="showPage('peer')">Peer-Reviewed Articles</a>
   <a href="#" onclick="showPage('science')">Scientifically Based Website</a>
-  <a href="#" onclick="showPage('Citations')">Citations</a>
+  <a href="#" onclick="showPage('citations')">Citations</a>
 </nav>
 
 <!-- HOME PAGE -->
 <div id="home" class="page active">
   <h2>Welcome</h2>
-  <p>Discover how compassion can improve your physical and mental health.</p>
-
-  <!-- Embedded YouTube Video -->
-  <div class="welcome-video">
-    <iframe width="100%" height="315"
-            src="https://www.youtube.com/embed/X0_glFODTkE"
-            title="Schwartz Center for Compassionate Healthcare"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-  </div>
+  <p style="text-align:center;">Learn how compassion can improve your physical and mental well-being. Try the quiz below to see what you know!</p>
 
   <div class="quiz-container">
     <h2>Compassion Knowledge Quiz</h2>
 
     <div class="question">
-      <p>1. Compassion can help lower which stress hormone?</p>
+      <p>1. Studies have shown that practicing compassion can reduce levels of certain hormones that are released during stress. Which of the following is most affected?  
+      <em>If you’re unsure, check the “Scientifically Based Websites” section for research on stress hormones and compassion.</em></p>
       <label><input type="radio" name="q1" value="cortisol"> Cortisol</label><br>
       <label><input type="radio" name="q1" value="adrenaline"> Adrenaline</label><br>
       <label><input type="radio" name="q1" value="insulin"> Insulin</label>
     </div>
 
     <div class="question">
-      <p>2. Compassion increases feelings of psychological:</p>
+      <p>2. Compassionate behavior not only affects physical health but also has psychological benefits. Which feeling is most likely to increase in people who regularly practice compassion?  
+      <em>Hint: Research shows that compassion strengthens social bonds and emotional connection.</em></p>
       <label><input type="radio" name="q2" value="connection"> Connection</label><br>
       <label><input type="radio" name="q2" value="isolation"> Isolation</label><br>
       <label><input type="radio" name="q2" value="fear"> Fear</label>
     </div>
 
     <div class="question">
-      <p>3. Practicing compassion can improve overall:</p>
-      <label><input type="radio" name="q3" value="wellbeing"> Well-being</label><br>
-      <label><input type="radio" name="q3" value="conflict"> Conflict</label><br>
-      <label><input type="radio" name="q3" value="stress"> Stress</label>
+      <p>3. Compassion practice can influence overall life satisfaction. Which of the following is a likely outcome for someone who practices compassion regularly?  
+      <em>Check the “Scientifically Based Websites” section if you’re not sure how well-being is affected.</em></p>
+      <label><input type="radio" name="q3" value="wellbeing"> Improved well-being</label><br>
+      <label><input type="radio" name="q3" value="conflict"> Increased conflict</label><br>
+      <label><input type="radio" name="q3" value="stress"> Higher stress levels</label>
     </div>
 
     <div class="question">
-      <p>4. Compassion activates which brain system?</p>
+      <p>4. Neuroscience studies indicate that compassion activates specific brain systems. Which system is primarily involved when a person engages in compassionate behavior?  
+      <em>Refer to the “Scientifically Based Websites” section for information on brain reward pathways and compassion.</em></p>
       <label><input type="radio" name="q4" value="reward"> Reward system</label><br>
       <label><input type="radio" name="q4" value="fight"> Fight-or-flight system</label><br>
       <label><input type="radio" name="q4" value="motor"> Motor cortex</label>
     </div>
 
     <div class="question">
-      <p>5. People who practice compassion regularly often experience:</p>
+      <p>5. People who cultivate compassion tend to experience different emotional patterns. Which of the following outcomes is most commonly reported?  
+      <em>If uncertain, review studies in the “Peer-Reviewed Articles” section regarding anxiety and emotional regulation.</em></p>
       <label><input type="radio" name="q5" value="low-anxiety"> Lower anxiety</label><br>
       <label><input type="radio" name="q5" value="high-stress"> Higher chronic stress</label><br>
       <label><input type="radio" name="q5" value="less-regulation"> Less emotional regulation</label>
@@ -257,7 +266,7 @@
   <img src="doctor-9628974.jpg" alt="Doctor comforting patient" class="section-img" />
 </div>
 
-<!-- PEER-REVIEWED PAGE -->
+<!-- PEER-REVIEWED ARTICLES PAGE -->
 <div id="peer" class="page">
   <h2>Peer-Reviewed Articles</h2>
   <ul>
@@ -281,7 +290,6 @@
   <h2>Scientifically Based Websites</h2>
 
   <div class="card-container">
-
     <div class="card">
       <div class="card-title">Greater Good Science Center – UC Berkeley</div>
       <p>
@@ -296,69 +304,4 @@
       <div class="card-title">BMC Medical Education – Compassion in Healthcare Review</div>
       <p>
         This review studied compassion in healthcare between 2015–2020.  
-        Results show compassion improves patient care, increases satisfaction, and strengthens emotional well-being.  
-        Only a few studies tested training programs, showing a need for more structured compassion education.
-      </p>
-      <p><strong>Website:</strong> BMC Medical Education (Peer-Reviewed Journal)</p>
-    </div>
-
-  </div>
-</div>
-
-<!-- CITATIONS PAGE -->
-<div id="Citations" class="page">
-  <h2>Citations</h2>
-  <p class="citation">
-    Cosley, B. J., McCoy, S. K., Saslow, L. R., & Epel, E. S. (2010).  
-    Is compassion for others stress buffering? Consequences of compassion and social support for physiological reactivity to stress.  
-    <em>Journal of Experimental Social Psychology, 46</em>(5), 816–823.  
-    <a href="https://doi.org/10.1016/j.jesp.2010.04.008" target="_blank">https://doi.org/10.1016/j.jesp.2010.04.008</a>
-  </p>
-
-  <p class="citation">
-    Lee, E. E., Govind, T., Ramsey, M., Wu, T. C., Daly, R., Liu, J., Tu, X. M., Paulus, M. P., Thomas, M. L., & Jeste, D. V. (2021).  
-    Compassion toward others and self-compassion predict mental and physical well-being: A 5-year longitudinal study...  
-    <em>Translational Psychiatry, 11</em>(1), 397–399.  
-    <a href="https://doi.org/10.1038/s41398-021-01491-8" target="_blank">https://doi.org/10.1038/s41398-021-01491-8</a>
-  </p>
-
-  <p class="citation">
-    Saarinen, A. I. L., Keltikangas-Järvinen, L., Hintsa, T., Pulkki-Råback, L., Ravaja, N., Lehtimäki, T., Raitakari, O., & Hintsanen, M. (2020).  
-    Does compassion predict blood pressure and hypertension?  
-    <em>International Journal of Behavioral Medicine, 27</em>(5), 527–538.  
-    <a href="https://doi.org/10.1007/s12529-020-09886-5" target="_blank">https://doi.org/10.1007/s12529-020-09886-5</a>
-  </p>
-</div>
-
-<footer>
-  <img src="Integrated_New_Horz_SOAHS_black.jpg" alt="Logo" class="tiny-img" />
-  © 2025 The Physiological Health Benefits of Compassion
-</footer>
-
-<script>
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function checkQuiz() {
-  let score = 0;
-  const answers = {q1:"cortisol",q2:"connection",q3:"wellbeing",q4:"reward",q5:"low-anxiety"};
-  for (let q in answers) {
-    const selected = document.querySelector(`input[name="${q}"]:checked`);
-    if (selected && selected.value === answers[q]) score++;
-  }
-
-  const total = Object.keys(answers).length;
-  let message = "";
-  if (score === total) message = "Amazing! You understand compassion very well.";
-  else if (score >= total - 1) message = "Great job! You know quite a bit.";
-  else message = "Keep learning — compassion has many benefits!";
-  
-  document.getElementById("quizResult").innerText = `You scored ${score}/${total}. ${message}`;
-}
-</script>
-
-</body>
-</html>
+        Results show compassion improves patient care, increases satisfaction, and strengthens

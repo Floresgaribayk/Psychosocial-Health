@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The Physiological Health Benefits of Compassion</title>
@@ -80,6 +80,28 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   }
 
+  /* HOME PAGE WELCOME CARD */
+  #home .welcome-card {
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5); /* light grey gradient */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #home .welcome-card h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  #home .welcome-card p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
   /* QUIZ STYLING */
   .quiz-container {
     background: #eef2ff;
@@ -88,13 +110,11 @@
     margin: 20px auto;
     border-radius: 14px;
     max-width: 550px;
-    text-align: left;
   }
 
   .quiz-container h2 {
     color: #4338ca;
     margin-bottom: 10px;
-    text-align: center;
   }
 
   .question {
@@ -163,34 +183,14 @@
     color: #4a148c;
   }
 
-  /* HOME PAGE STYLING */
-  #home .welcome-card {
-    background: linear-gradient(135deg, #f3e5f5, #e1bee7);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    text-align: center;
-  }
-
-  #home .welcome-card h2 {
-    color: #4a148c;
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-
-  #home .welcome-card p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-
-  /* CITATIONS */
+  /* Citations styling */
   .citation {
     margin-left: 0;
     padding-left: 20px;
     text-indent: -20px;
     line-height: 1.5;
   }
+
 </style>
 </head>
 
@@ -206,57 +206,57 @@
   <a href="#" onclick="showPage('podcast')">Podcast</a>
   <a href="#" onclick="showPage('about')">About</a>
   <a href="#" onclick="showPage('peer')">Peer-Reviewed Articles</a>
-  <a href="#" onclick="showPage('science')">Scientifically Based Websites</a>
+  <a href="#" onclick="showPage('science')">Scientifically Based Website</a>
   <a href="#" onclick="showPage('Citations')">Citations</a>
 </nav>
 
 <!-- HOME PAGE -->
 <div id="home" class="page active">
   <div class="welcome-card">
-    <h2>Welcome to the World of Compassion!</h2>
-    <p>Learn how compassion affects your mind and body, and test your knowledge with our quick quiz!</p>
+    <h2>Welcome to Our Compassion Project</h2>
+    <p>Learn how practicing compassion can improve both your physical and mental health. Take the quiz, explore peer-reviewed articles, and discover scientifically based resources.</p>
+  </div>
 
-    <div class="quiz-container">
-      <h2>Compassion Knowledge Quiz</h2>
+  <div class="quiz-container">
+    <h2>Compassion Knowledge Quiz</h2>
 
-      <div class="question">
-        <p>1. Compassion can help lower which stress hormone?</p>
-        <label><input type="radio" name="q1" value="cortisol"> Cortisol</label><br>
-        <label><input type="radio" name="q1" value="adrenaline"> Adrenaline</label><br>
-        <label><input type="radio" name="q1" value="insulin"> Insulin</label>
-      </div>
-
-      <div class="question">
-        <p>2. Compassion increases feelings of psychological:</p>
-        <label><input type="radio" name="q2" value="connection"> Connection</label><br>
-        <label><input type="radio" name="q2" value="isolation"> Isolation</label><br>
-        <label><input type="radio" name="q2" value="fear"> Fear</label>
-      </div>
-
-      <div class="question">
-        <p>3. Practicing compassion can improve overall:</p>
-        <label><input type="radio" name="q3" value="wellbeing"> Well-being</label><br>
-        <label><input type="radio" name="q3" value="conflict"> Conflict</label><br>
-        <label><input type="radio" name="q3" value="stress"> Stress</label>
-      </div>
-
-      <div class="question">
-        <p>4. Compassion activates which brain system?</p>
-        <label><input type="radio" name="q4" value="reward"> Reward system</label><br>
-        <label><input type="radio" name="q4" value="fight"> Fight-or-flight system</label><br>
-        <label><input type="radio" name="q4" value="motor"> Motor cortex</label>
-      </div>
-
-      <div class="question">
-        <p>5. People who practice compassion regularly often experience:</p>
-        <label><input type="radio" name="q5" value="low-anxiety"> Lower anxiety</label><br>
-        <label><input type="radio" name="q5" value="high-stress"> Higher chronic stress</label><br>
-        <label><input type="radio" name="q5" value="less-regulation"> Less emotional regulation</label>
-      </div>
-
-      <button onclick="checkQuiz()">Submit Compassion Quiz</button>
-      <p id="quizResult" class="result"></p>
+    <div class="question">
+      <p>1. Compassion can help lower which stress hormone?</p>
+      <label><input type="radio" name="q1" value="cortisol"> Cortisol</label><br>
+      <label><input type="radio" name="q1" value="adrenaline"> Adrenaline</label><br>
+      <label><input type="radio" name="q1" value="insulin"> Insulin</label>
     </div>
+
+    <div class="question">
+      <p>2. Compassion increases feelings of psychological:</p>
+      <label><input type="radio" name="q2" value="connection"> Connection</label><br>
+      <label><input type="radio" name="q2" value="isolation"> Isolation</label><br>
+      <label><input type="radio" name="q2" value="fear"> Fear</label>
+    </div>
+
+    <div class="question">
+      <p>3. Practicing compassion can improve overall:</p>
+      <label><input type="radio" name="q3" value="wellbeing"> Well-being</label><br>
+      <label><input type="radio" name="q3" value="conflict"> Conflict</label><br>
+      <label><input type="radio" name="q3" value="stress"> Stress</label>
+    </div>
+
+    <div class="question">
+      <p>4. Compassion activates which brain system?</p>
+      <label><input type="radio" name="q4" value="reward"> Reward system</label><br>
+      <label><input type="radio" name="q4" value="fight"> Fight-or-flight system</label><br>
+      <label><input type="radio" name="q4" value="motor"> Motor cortex</label>
+    </div>
+
+    <div class="question">
+      <p>5. People who practice compassion regularly often experience:</p>
+      <label><input type="radio" name="q5" value="low-anxiety"> Lower anxiety</label><br>
+      <label><input type="radio" name="q5" value="high-stress"> Higher chronic stress</label><br>
+      <label><input type="radio" name="q5" value="less-regulation"> Less emotional regulation</label>
+    </div>
+
+    <button onclick="checkQuiz()">Submit Compassion Quiz</button>
+    <p id="quizResult" class="result"></p>
   </div>
 </div>
 
@@ -297,6 +297,7 @@
   <h2>Scientifically Based Websites</h2>
 
   <div class="card-container">
+
     <div class="card">
       <div class="card-title">Greater Good Science Center – UC Berkeley</div>
       <p>
@@ -316,12 +317,14 @@
       </p>
       <p><strong>Website:</strong> BMC Medical Education (Peer-Reviewed Journal)</p>
     </div>
+
   </div>
 </div>
 
-<!-- CITATIONS -->
+<!-- CITATIONS PAGE -->
 <div id="Citations" class="page">
   <h2>Citations</h2>
+
   <p class="citation">
     Cosley, B. J., McCoy, S. K., Saslow, L. R., & Epel, E. S. (2010).  
     Is compassion for others stress buffering? Consequences of compassion and social support for physiological reactivity to stress.  
@@ -342,6 +345,7 @@
     <em>International Journal of Behavioral Medicine, 27</em>(5), 527–538.  
     <a href="https://doi.org/10.1007/s12529-020-09886-5" target="_blank">https://doi.org/10.1007/s12529-020-09886-5</a>
   </p>
+
 </div>
 
 <footer>
@@ -376,4 +380,3 @@ function checkQuiz() {
 
 </body>
 </html>
-

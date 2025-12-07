@@ -12,12 +12,14 @@
     background: #f8f9fa;
     color: #333;
   }
+
   header {
     background-color: #4a148c;
     color: white;
     text-align: center;
     padding: 25px 10px;
   }
+
   nav {
     background: #6a1b9a;
     display: flex;
@@ -25,6 +27,7 @@
     flex-wrap: wrap;
     padding: 10px;
   }
+
   nav a {
     color: white;
     text-decoration: none;
@@ -32,10 +35,11 @@
     font-weight: bold;
     transition: color 0.3s ease;
   }
+
   nav a:hover {
     color: #ffeb3b;
   }
-  
+
   .page {
     display: none;
     padding: 25px;
@@ -45,6 +49,7 @@
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
+
   .active {
     display: block;
   }
@@ -57,6 +62,7 @@
     font-size: 0.9em;
     color: #555;
   }
+
   img.tiny-img {
     width: 500px;
     height: auto;
@@ -64,20 +70,31 @@
     margin: 0 auto;
   }
 
+  img.section-img {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+
   /* QUIZ STYLING */
   .quiz-container {
-    background: #e0e0e0;
+    background: #eef2ff;
     border: 2px solid #c7d2fe;
     padding: 20px;
     margin: 20px auto;
     border-radius: 14px;
     max-width: 550px;
   }
+
   .quiz-container h2 {
     color: #4338ca;
     margin-bottom: 10px;
-    text-align: center;
   }
+
   .question {
     margin-bottom: 18px;
     padding: 10px;
@@ -85,14 +102,7 @@
     border-radius: 8px;
     border: 1px solid #dbeafe;
   }
-  .correct {
-    background-color: #d1fae5 !important;
-    border-color: #10b981 !important;
-  }
-  .incorrect {
-    background-color: #fee2e2 !important;
-    border-color: #ef4444 !important;
-  }
+
   button {
     background: #6366f1;
     color: white;
@@ -101,18 +111,28 @@
     border-radius: 6px;
     cursor: pointer;
     margin-top: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
+
   button:hover {
     background: #4f46e5;
   }
+
   .result {
     font-weight: bold;
     margin-top: 15px;
     color: #312e81;
     text-align: center;
+  }
+
+  /* Correct/Wrong answer highlights */
+  .correct {
+    background-color: #d1fae5; /* light green */
+    border-color: #10b981;
+  }
+
+  .incorrect {
+    background-color: #fee2e2; /* light red */
+    border-color: #ef4444;
   }
 
   /* MINI CARDS STYLING */
@@ -122,6 +142,7 @@
     gap: 20px;
     margin-top: 20px;
   }
+
   .card {
     background: #f5f3ff;
     border: 2px solid #dcd6ff;
@@ -130,43 +151,33 @@
     transition: 0.3s ease;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   }
+
   .card:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 14px rgba(0,0,0,0.15);
   }
+
   .card-title {
     font-size: 20px;
     font-weight: bold;
     color: #4a148c;
     margin-bottom: 10px;
   }
+
   .card p {
     line-height: 1.5;
   }
+
   .card strong {
     color: #4a148c;
   }
 
-  /* YouTube Video Styling */
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+  /* Welcome video styling */
+  .welcome-video {
     margin: 20px auto;
-    max-width: 800px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    max-width: 560px;
   }
-  .video-container iframe, .video-container object, .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-  }
+
 </style>
 </head>
 
@@ -182,17 +193,33 @@
   <a href="#" onclick="showPage('podcast')">Podcast</a>
   <a href="#" onclick="showPage('about')">About</a>
   <a href="#" onclick="showPage('peer')">Peer-Reviewed Articles</a>
-  <a href="#" onclick="showPage('science')">Scientifically Based Websites</a>
+  <a href="#" onclick="showPage('science')">Scientifically Based Website</a>
   <a href="#" onclick="showPage('Citations')">Citations</a>
 </nav>
 
 <!-- HOME PAGE -->
 <div id="home" class="page active">
   <h2>Welcome</h2>
-  <p style="text-align:center;">Learn how compassion affects your health. Watch this short video and try the quiz below!</p>
+  <p>Discover how compassion can improve your physical and mental health.</p>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/86q0f01cJu8" title="Schwartz Center for Compassionate Healthcare" frameborder="0" allowfullscreen></iframe>
+  <!-- First Embedded YouTube Video -->
+  <div class="welcome-video">
+    <iframe width="100%" height="315"
+            src="https://www.youtube.com/embed/X0_glFODTkE"
+            title="Schwartz Center for Compassionate Healthcare"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+  </div>
+
+  <!-- Second Embedded YouTube Video -->
+  <div class="welcome-video">
+    <iframe width="100%" height="315"
+            src="https://www.youtube.com/embed/R_u37zKLiXI?start=1"
+            title="Compassion Video 2"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
   </div>
 
   <div class="quiz-container">
@@ -233,7 +260,7 @@
       <label><input type="radio" name="q5" value="less-regulation"> Less emotional regulation</label>
     </div>
 
-    <button onclick="checkQuiz()">Submit Compassion Quiz</button>
+    <button onclick="checkQuiz(this)">Submit Compassion Quiz</button>
     <p id="quizResult" class="result"></p>
   </div>
 </div>
@@ -248,10 +275,10 @@
 <div id="about" class="page">
   <h2>About</h2>
   <p>This site explores how compassion can affect physical health.</p>
-  <img src="doctor-9628974.jpg" alt="Doctor comforting patient" style="width:300px; display:block; margin:20px auto;" />
+  <img src="doctor-9628974.jpg" alt="Doctor comforting patient" class="section-img" />
 </div>
 
-<!-- PEER-REVIEWED ARTICLES -->
+<!-- PEER-REVIEWED PAGE -->
 <div id="peer" class="page">
   <h2>Peer-Reviewed Articles</h2>
   <ul>
@@ -302,7 +329,26 @@
 <!-- CITATIONS PAGE -->
 <div id="Citations" class="page">
   <h2>Citations</h2>
-  <p>Pending...</p>
+  <p class="citation">
+    Cosley, B. J., McCoy, S. K., Saslow, L. R., & Epel, E. S. (2010).  
+    Is compassion for others stress buffering? Consequences of compassion and social support for physiological reactivity to stress.  
+    <em>Journal of Experimental Social Psychology, 46</em>(5), 816–823.  
+    <a href="https://doi.org/10.1016/j.jesp.2010.04.008" target="_blank">https://doi.org/10.1016/j.jesp.2010.04.008</a>
+  </p>
+
+  <p class="citation">
+    Lee, E. E., Govind, T., Ramsey, M., Wu, T. C., Daly, R., Liu, J., Tu, X. M., Paulus, M. P., Thomas, M. L., & Jeste, D. V. (2021).  
+    Compassion toward others and self-compassion predict mental and physical well-being: A 5-year longitudinal study...  
+    <em>Translational Psychiatry, 11</em>(1), 397–399.  
+    <a href="https://doi.org/10.1038/s41398-021-01491-8" target="_blank">https://doi.org/10.1038/s41398-021-01491-8</a>
+  </p>
+
+  <p class="citation">
+    Saarinen, A. I. L., Keltikangas-Järvinen, L., Hintsa, T., Pulkki-Råback, L., Ravaja, N., Lehtimäki, T., Raitakari, O., & Hintsanen, M. (2020).  
+    Does compassion predict blood pressure and hypertension?  
+    <em>International Journal of Behavioral Medicine, 27</em>(5), 527–538.  
+    <a href="https://doi.org/10.1007/s12529-020-09886-5" target="_blank">https://doi.org/10.1007/s12529-020-09886-5</a>
+  </p>
 </div>
 
 <footer>
@@ -317,24 +363,27 @@ function showPage(id) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function checkQuiz() {
+function checkQuiz(button) {
   let score = 0;
   const answers = {q1:"cortisol",q2:"connection",q3:"wellbeing",q4:"reward",q5:"low-anxiety"};
+
   for (let q in answers) {
-    const selected = document.querySelector(`input[name="${q}"]:checked`);
-    const options = document.getElementsByName(q);
-    options.forEach(opt => {
-      const parent = opt.parentElement;
-      parent.classList.remove('correct', 'incorrect');
-      if(opt.checked){
-        if(opt.value === answers[q]){
-          parent.classList.add('correct');
-          score++;
-        } else {
-          parent.classList.add('incorrect');
-        }
+    const options = document.querySelectorAll(`input[name="${q}"]`);
+    
+    options.forEach(option => {
+      option.disabled = true; // prevent changing answers
+      option.parentElement.classList.remove('correct', 'incorrect');
+
+      if (option.value === answers[q]) {
+        option.parentElement.classList.add('correct');
+      }
+      if (option.checked && option.value !== answers[q]) {
+        option.parentElement.classList.add('incorrect');
       }
     });
+
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected && selected.value === answers[q]) score++;
   }
 
   const total = Object.keys(answers).length;
@@ -342,8 +391,16 @@ function checkQuiz() {
   if (score === total) message = "Amazing! You understand compassion very well.";
   else if (score >= total - 1) message = "Great job! You know quite a bit.";
   else message = "Keep learning — compassion has many benefits!";
-  
+
   document.getElementById("quizResult").innerText = `You scored ${score}/${total}. ${message}`;
+
+  button.disabled = true; // disable submit button
+}
+</script>
+
+</body>
+</html>
+
 }
 </script>
 

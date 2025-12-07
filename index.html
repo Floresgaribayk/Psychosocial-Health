@@ -80,28 +80,6 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   }
 
-  /* HOME PAGE WELCOME CARD */
-  #home .welcome-card {
-    background: linear-gradient(135deg, #e0e0e0, #f5f5f5); /* light grey gradient */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  #home .welcome-card h2 {
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-
-  #home .welcome-card p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-
   /* QUIZ STYLING */
   .quiz-container {
     background: #eef2ff;
@@ -183,12 +161,10 @@
     color: #4a148c;
   }
 
-  /* Citations styling */
-  .citation {
-    margin-left: 0;
-    padding-left: 20px;
-    text-indent: -20px;
-    line-height: 1.5;
+  /* Welcome video styling */
+  .welcome-video {
+    margin: 20px auto;
+    max-width: 560px;
   }
 
 </style>
@@ -212,9 +188,17 @@
 
 <!-- HOME PAGE -->
 <div id="home" class="page active">
-  <div class="welcome-card">
-    <h2>Welcome to Our Compassion Project</h2>
-    <p>Learn how practicing compassion can improve both your physical and mental health. Take the quiz, explore peer-reviewed articles, and discover scientifically based resources.</p>
+  <h2>Welcome</h2>
+  <p>Discover how compassion can improve your physical and mental health.</p>
+
+  <!-- Embedded YouTube Video -->
+  <div class="welcome-video">
+    <iframe width="100%" height="315"
+            src="https://www.youtube.com/embed/X0_glFODTkE"
+            title="Schwartz Center for Compassionate Healthcare"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
   </div>
 
   <div class="quiz-container">
@@ -273,7 +257,7 @@
   <img src="doctor-9628974.jpg" alt="Doctor comforting patient" class="section-img" />
 </div>
 
-<!-- PEER-REVIEWED ARTICLES -->
+<!-- PEER-REVIEWED PAGE -->
 <div id="peer" class="page">
   <h2>Peer-Reviewed Articles</h2>
   <ul>
@@ -292,7 +276,7 @@
   </ul>
 </div>
 
-<!-- SCIENTIFICALLY BASED WEBSITES -->
+<!-- SCIENCE PAGE WITH MINI CARDS -->
 <div id="science" class="page">
   <h2>Scientifically Based Websites</h2>
 
@@ -324,7 +308,6 @@
 <!-- CITATIONS PAGE -->
 <div id="Citations" class="page">
   <h2>Citations</h2>
-
   <p class="citation">
     Cosley, B. J., McCoy, S. K., Saslow, L. R., & Epel, E. S. (2010).  
     Is compassion for others stress buffering? Consequences of compassion and social support for physiological reactivity to stress.  
@@ -345,7 +328,6 @@
     <em>International Journal of Behavioral Medicine, 27</em>(5), 527–538.  
     <a href="https://doi.org/10.1007/s12529-020-09886-5" target="_blank">https://doi.org/10.1007/s12529-020-09886-5</a>
   </p>
-
 </div>
 
 <footer>
@@ -373,7 +355,7 @@ function checkQuiz() {
   if (score === total) message = "Amazing! You understand compassion very well.";
   else if (score >= total - 1) message = "Great job! You know quite a bit.";
   else message = "Keep learning — compassion has many benefits!";
-
+  
   document.getElementById("quizResult").innerText = `You scored ${score}/${total}. ${message}`;
 }
 </script>

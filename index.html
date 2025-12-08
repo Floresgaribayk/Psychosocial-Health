@@ -13,13 +13,14 @@ body {
   color: #333;
 }
 
-/* HEADER + NAV UNIFIED */
+/* HEADER + NAV */
 header {
-  background-color: #a67bca; /* lighter lavender */
+  background-color: #a67bca;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
+  flex-wrap: wrap;
 }
 
 header h1 {
@@ -32,6 +33,7 @@ header h1 {
 nav {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -54,7 +56,7 @@ nav a:hover {
   padding: 25px;
   max-width: 900px;
   margin: 40px auto;
-  background: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -74,6 +76,7 @@ footer {
 
 img.tiny-img {
   width: 500px;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -81,7 +84,7 @@ img.tiny-img {
 
 img.section-img {
   width: 50%;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 20px auto;
@@ -221,15 +224,43 @@ button:hover {
   color: #4a148c;
 }
 
-/* RESPONSIVE */
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
   .page {
-    margin: 20px 10px;
+    margin: 15px 10px;
     padding: 15px;
   }
-  img.section-img, img.tiny-img {
+
+  img.section-img, img.tiny-img, .welcome-video iframe {
     width: 100%;
     height: auto;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav a {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .quiz-container {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
   }
 }
 </style>
@@ -313,10 +344,9 @@ button:hover {
 <!-- ABOUT PAGE -->
 <div id="about" class="page">
   <h2>About</h2>
-  <p>Compassion is a vital and powerful tool that not promotes a positive emotional response; 
-    but has been scientifically proven to benefit human physiology. Growing research has shown that 
-    the act of giving and receiving compassion is an excellent tool in calming physiological responses
-    to stress and reducing patient mortality rates.</p>
+  <p>Compassion is a vital and powerful tool that not only promotes a positive emotional response, 
+    but has been scientifically proven to benefit human physiology. Research shows that giving and receiving compassion 
+    reduces stress and improves overall health.</p>
   <img src="doctor-9628974.jpg" class="section-img">
 </div>
 
@@ -345,12 +375,12 @@ button:hover {
   <div class="card-container">
     <div class="card">
       <div class="card-title">Greater Good Science Center – UC Berkeley</div>
-      <p>Compassion and kindness do make the world a nicer place. It helps us feel happier and healthier. Research shows that showing or receiving kindness releases natural chemicals that boost mood and calm stress. Being compassionate can improve heart health, lower blood pressure, and support emotional balance. Simple acts like checking in on a friend, being patient, or showing gratitude can strengthen relationships and foster a healthier mind.</p>
+      <p>Research shows that showing or receiving kindness releases natural chemicals that boost mood and calm stress. Being compassionate can improve heart health, lower blood pressure, and support emotional balance.</p>
       <a href="https://ggsc.berkeley.edu/" target="_blank">Visit Website</a>
     </div>
     <div class="card">
       <div class="card-title">Compassion Research Lab</div>
-        <p>Compassion Research Lab</p>
+      <p>Compassion Research Lab</p>
       <a href="https://www.compassionresearchlab.com" target="_blank">Visit Website</a>
     </div>
   </div>
@@ -361,23 +391,18 @@ button:hover {
   <h2>Citations</h2>
   <p class="citation">
     Cosley, B. J., McCoy, S. K., Saslow, L. R., & Epel, E. S. (2010).  
-    Is compassion for others stress buffering? Consequences of compassion and social support for physiological reactivity to stress.  
-    <em>Journal of Experimental Social Psychology, 46</em>(5), 816–823.  
-    <a href="https://doi.org/10.1016/j.jesp.2010.04.008" target="_blank">https://doi.org/10.1016/j.jesp.2010.04.008</a>
+    Is compassion for others stress buffering? <em>Journal of Experimental Social Psychology, 46</em>(5), 816–823.  
+    <a href="https://doi.org/10.1016/j.jesp.2010.04.008" target="_blank">Link</a>
   </p>
 
   <p class="citation">
-    Lee, E. E., Govind, T., Ramsey, M., Wu, T. C., Daly, R., Liu, J., Tu, X. M., Paulus, M. P., Thomas, M. L., & Jeste, D. V. (2021).  
-    Compassion toward others and self-compassion predict mental and physical well-being: A 5-year longitudinal study...  
-    <em>Translational Psychiatry, 11</em>(1), 397–399.  
-    <a href="https://doi.org/10.1038/s41398-021-01491-8" target="_blank">https://doi.org/10.1038/s41398-021-01491-8</a>
+    Lee, E. E., Govind, T., et al. (2021). Compassion toward others and self-compassion predict mental and physical well-being. <em>Translational Psychiatry, 11</em>(1), 397–399.  
+    <a href="https://doi.org/10.1038/s41398-021-01491-8" target="_blank">Link</a>
   </p>
 
   <p class="citation">
-    Saarinen, A. I. L., Keltikangas-Järvinen, L., Hintsa, T., Pulkki-Råback, L., Ravaja, N., Lehtimäki, T., Raitakari, O., & Hintsanen, M. (2020).  
-    Does compassion predict blood pressure and hypertension?  
-    <em>International Journal of Behavioral Medicine, 27</em>(5), 527–538.  
-    <a href="https://doi.org/10.1007/s12529-020-09886-5" target="_blank">https://doi.org/10.1007/s12529-020-09886-5</a>
+    Saarinen, A. I. L., et al. (2020). Does compassion predict blood pressure and hypertension? <em>International Journal of Behavioral Medicine, 27</em>(5), 527–538.  
+    <a href="https://doi.org/10.1007/s12529-020-09886-5" target="_blank">Link</a>
   </p>
 </div>
 

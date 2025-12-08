@@ -15,7 +15,7 @@ body {
 
 /* HEADER + NAV UNIFIED */
 header {
-  background-color: #a67bca;
+  background-color: #a67bca; /* lighter lavender */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,9 +54,9 @@ nav a:hover {
   padding: 25px;
   max-width: 900px;
   margin: 40px auto;
-  background: rgba(255, 255, 255, 0.85); /* semi-transparent */
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent white */
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .active {
@@ -66,11 +66,10 @@ nav a:hover {
 footer {
   text-align: center;
   padding: 15px;
-  background: rgba(238, 238, 238, 0.85);
+  background: #eee;
   margin-top: 40px;
   font-size: 0.9em;
   color: #555;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
 }
 
 img.tiny-img {
@@ -92,8 +91,8 @@ img.section-img {
 
 /* QUIZ STYLING */
 .quiz-container {
-  background: rgba(238, 242, 255, 0.85); /* semi-transparent */
-  border: 2px solid rgba(199, 210, 254, 0.7);
+  background: #eef2ff;
+  border: 2px solid #c7d2fe;
   padding: 20px;
   margin: 20px auto;
   border-radius: 14px;
@@ -108,9 +107,9 @@ img.section-img {
 .question {
   margin-bottom: 18px;
   padding: 10px;
-  background: rgba(248, 250, 255, 0.85);
+  background: #f8faff;
   border-radius: 8px;
-  border: 1px solid rgba(219, 234, 254, 0.7);
+  border: 1px solid #dbeafe;
 }
 
 button {
@@ -154,8 +153,8 @@ button:hover {
 }
 
 .card {
-  background: rgba(245, 243, 255, 0.85); /* semi-transparent */
-  border: 2px solid rgba(220, 214, 255, 0.7);
+  background: #f5f3ff;
+  border: 2px solid #dcd6ff;
   padding: 20px;
   border-radius: 14px;
   transition: 0.3s ease;
@@ -178,12 +177,11 @@ button:hover {
 .welcome-video {
   margin: 20px auto;
   max-width: 560px;
-  width: 100%;
 }
 
 /* BLUE CARDS FOR PEER ARTICLES */
 #peer .card {
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* keep gradient */
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
   color: white;
   border: none;
 }
@@ -234,3 +232,196 @@ button:hover {
     height: auto;
   }
 }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>The Physiological Health Benefits of Compassion</h1>
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('podcast')">Podcast</a>
+    <a href="#" onclick="showPage('about')">About</a>
+    <a href="#" onclick="showPage('peer')">Peer-Reviewed Articles</a>
+    <a href="#" onclick="showPage('science')">Scientifically Based Website</a>
+    <a href="#" onclick="showPage('Citations')">Citations</a>
+  </nav>
+</header>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+  <h2>Welcome</h2>
+  <p>Discover how compassion can improve your physical and mental health.</p>
+  <div class="welcome-video">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/X0_glFODTkE" allowfullscreen></iframe>
+  </div>
+  <div class="welcome-video">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/R_u37zKLiXI?start=1" allowfullscreen></iframe>
+  </div>
+
+  <div class="quiz-header-box">
+    <div class="divider-text">
+      <span class="line"></span>
+      <span class="text">Test Your Compassion Knowledge</span>
+      <span class="line"></span>
+    </div>
+  </div>
+
+  <div class="quiz-container">
+    <div class="question">
+      <p>1. Compassion can help lower which stress hormone?</p>
+      <label><input type="radio" name="q1" value="cortisol"> Cortisol</label><br>
+      <label><input type="radio" name="q1" value="adrenaline"> Adrenaline</label><br>
+      <label><input type="radio" name="q1" value="insulin"> Insulin</label>
+    </div>
+    <div class="question">
+      <p>2. Compassion increases feelings of psychological:</p>
+      <label><input type="radio" name="q2" value="connection"> Connection</label><br>
+      <label><input type="radio" name="q2" value="isolation"> Isolation</label><br>
+      <label><input type="radio" name="q2" value="fear"> Fear</label>
+    </div>
+    <div class="question">
+      <p>3. Practicing compassion can improve overall:</p>
+      <label><input type="radio" name="q3" value="wellbeing"> Well-being</label><br>
+      <label><input type="radio" name="q3" value="conflict"> Conflict</label><br>
+      <label><input type="radio" name="q3" value="stress"> Stress</label>
+    </div>
+    <div class="question">
+      <p>4. Compassion activates which brain system?</p>
+      <label><input type="radio" name="q4" value="reward"> Reward system</label><br>
+      <label><input type="radio" name="q4" value="fight"> Fight-or-flight system</label><br>
+      <label><input type="radio" name="q4" value="motor"> Motor cortex</label>
+    </div>
+    <div class="question">
+      <p>5. People who practice compassion regularly often experience:</p>
+      <label><input type="radio" name="q5" value="low-anxiety"> Lower anxiety</label><br>
+      <label><input type="radio" name="q5" value="high-stress"> Higher chronic stress</label><br>
+      <label><input type="radio" name="q5" value="less-regulation"> Less emotional regulation</label>
+    </div>
+    <button onclick="checkQuiz(this)">Submit Compassion Quiz</button>
+    <p id="quizResult" class="result"></p>
+  </div>
+</div>
+
+<!-- PODCAST PAGE -->
+<div id="podcast" class="page">
+  <h2>Podcast</h2>
+  <p>Cats test pg 2</p>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="about" class="page">
+  <h2>About</h2>
+  <p>Compassion is a vital and powerful tool that not promotes a positive emotional response; 
+    but has been scientifically proven to benefit human physiology. Growing research has shown that 
+    the act of giving and receiving compassion is an excellent tool in calming physiological responses
+    to stress and reducing patient mortality rates.</p>
+  <img src="doctor-9628974.jpg" class="section-img">
+</div>
+
+<!-- PEER-REVIEWED PAGE -->
+<div id="peer" class="page">
+  <h2>Peer-Reviewed Articles</h2>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-title">Compassion and Mental Health (Nature)</div>
+      <a href="https://www.nature.com/articles/s41398-021-01491-8" target="_blank">Read Article</a>
+    </div>
+    <div class="card">
+      <div class="card-title">The Impact of Compassion on Physiological Health (Springer)</div>
+      <a href="https://link.springer.com/article/10.1007/s12529-020-09886-5" target="_blank">Read Article</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Compassion and Stress Recovery Mechanisms (ScienceDirect)</div>
+      <a href="https://www-sciencedirect-com.ezproxy.library.unlv.edu/science/article/pii/S0022103110000934?via%3Dihub" target="_blank">Read Article</a>
+    </div>
+  </div>
+</div>
+
+<!-- SCIENCE PAGE -->
+<div id="science" class="page">
+  <h2>Scientifically Based Websites</h2>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-title">Greater Good Science Center – UC Berkeley</div>
+      <p>Compassion and kindness do make the world a nicer place. It helps us feel happier and healthier. Research shows that showing or receiving kindness releases natural chemicals that boost mood and calm stress. Being compassionate can improve heart health, lower blood pressure, and support emotional balance. Simple acts like checking in on a friend, being patient, or showing gratitude can strengthen relationships and foster a healthier mind.</p>
+      <a href="https://ggsc.berkeley.edu/" target="_blank">Visit Website</a>
+    </div>
+    <div class="card">
+      <div class="card-title">BMC Medical Education – Compassion in Healthcare Review</div>
+      <p>This review explored how compassion is studied and practiced in healthcare between 2015 and 2020. Researchers examined what compassion means for patients and healthcare workers. Compassion is linked to better care, greater patient satisfaction, and improved emotional well-being. Some studies tested ways to teach or strengthen compassion in clinical settings, highlighting the need for more structured programs and research.</p>
+      <a href="https://link.springer.com/article/10.1007/s12529-020-09886-5" target="_blank">Visit Website</a>
+    </div>
+  </div>
+</div>
+
+<!-- CITATIONS PAGE -->
+<div id="Citations" class="page">
+  <h2>Citations</h2>
+  <p class="citation">
+    Cosley, B. J., McCoy, S. K., Saslow, L. R., & Epel, E. S. (2010).  
+    Is compassion for others stress buffering? Consequences of compassion and social support for physiological reactivity to stress.  
+    <em>Journal of Experimental Social Psychology, 46</em>(5), 816–823.  
+    <a href="https://doi.org/10.1016/j.jesp.2010.04.008" target="_blank">https://doi.org/10.1016/j.jesp.2010.04.008</a>
+  </p>
+
+  <p class="citation">
+    Lee, E. E., Govind, T., Ramsey, M., Wu, T. C., Daly, R., Liu, J., Tu, X. M., Paulus, M. P., Thomas, M. L., & Jeste, D. V. (2021).  
+    Compassion toward others and self-compassion predict mental and physical well-being: A 5-year longitudinal study...  
+    <em>Translational Psychiatry, 11</em>(1), 397–399.  
+    <a href="https://doi.org/10.1038/s41398-021-01491-8" target="_blank">https://doi.org/10.1038/s41398-021-01491-8</a>
+  </p>
+
+  <p class="citation">
+    Saarinen, A. I. L., Keltikangas-Järvinen, L., Hintsa, T., Pulkki-Råback, L., Ravaja, N., Lehtimäki, T., Raitakari, O., & Hintsanen, M. (2020).  
+    Does compassion predict blood pressure and hypertension?  
+    <em>International Journal of Behavioral Medicine, 27</em>(5), 527–538.  
+    <a href="https://doi.org/10.1007/s12529-020-09886-5" target="_blank">https://doi.org/10.1007/s12529-020-09886-5</a>
+  </p>
+</div>
+
+<footer>
+  <img src="Integrated_New_Horz_SOAHS_black.jpg" class="tiny-img">
+  © 2025 The Physiological Health Benefits of Compassion
+</footer>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function checkQuiz(button) {
+  let score = 0;
+  const answers = {q1:"cortisol",q2:"connection",q3:"wellbeing",q4:"reward",q5:"low-anxiety"};
+
+  for (let q in answers) {
+    const options = document.querySelectorAll(`input[name="${q}"]`);
+    
+    options.forEach(option => {
+      option.disabled = true;
+      option.parentElement.classList.remove('correct', 'incorrect');
+
+      if (option.value === answers[q]) {
+        option.parentElement.classList.add('correct');
+      }
+      if (option.checked && option.value !== answers[q]) {
+        option.parentElement.classList.add('incorrect');
+      }
+    });
+
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected && selected.value === answers[q]) score++;
+  }
+
+  const total = Object.keys(answers).length;
+  document.getElementById("quizResult").innerText =
+    `You scored ${score}/${total}.`;
+  button.disabled = true;
+}
+</script>
+
+</body>
+</html>

@@ -26,28 +26,44 @@ header h1 {
   font-weight: 600;
 }
 
-  /* NAV BAR */
-  nav {
-    background: #6a1b9a;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 4px;
-  }
+ /* HEADER + NAV TO LOOK UNIFIED */
+header {
+  background-color: #6a1b9a; /* match nav color */
+  color: white;
+  padding: 15px 25px;
+  text-align: center; /* center title */
+  border-bottom: 2px solid #4a148c; /* subtle line to separate nav from content */
+}
 
-  /* NAV LINK HOVER GLOW */
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 8px 15px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
+header h1 {
+  font-size: 24px;  
+  margin: 0;
+  font-weight: 700;
+}
 
-  nav a:hover {
-    text-shadow: 0 0 8px #e0d4f7, 0 0 15px #e0d4f7; /* light lavender glow */
-  }
+nav {
+  background: #6a1b9a; /* match header */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  gap: 15px;
+  border-top: 1px solid #4a148c; /* subtle line above nav links */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: #4a148c; /* hover background for better contrast */
+  text-shadow: 0 0 8px #e0d4f7;
+}
 
   /* PAGE BOX */
   .page {

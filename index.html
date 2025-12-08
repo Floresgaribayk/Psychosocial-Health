@@ -95,36 +95,15 @@ img.tiny-img {
   margin: 0 auto;
 }
 
+/* IMAGE SECTION STYLING */
 img.section-img {
   width: 100%;
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 20px auto;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-}
-
-/* ABOUT PAGE TWO-COLUMN LAYOUT */
-.about-container {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.about-container .text {
-  flex: 1 1 300px;
-}
-
-.about-container .image {
-  flex: 1 1 300px;
-}
-
-.about-container h3 {
-  color: #4a148c;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 /* QUIZ STYLING */
@@ -259,6 +238,33 @@ button:hover {
   color: #4a148c;
 }
 
+/* ABOUT PAGE FLEXIBLE LAYOUT */
+.about-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.about-container .text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-container .image {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* HIGHLIGHT BOXES */
+.highlight-box {
+  background: #eef2ff;
+  border: 2px solid #c7d2fe;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
   header h1 {
@@ -306,10 +312,6 @@ button:hover {
 
   button {
     width: 100%;
-  }
-
-  .about-container {
-    flex-direction: column;
   }
 }
 </style>
@@ -385,19 +387,31 @@ button:hover {
 <!-- ABOUT PAGE -->
 <div id="about" class="page">
   <h2>About</h2>
+
   <div class="about-container">
     <div class="text">
       <p>Compassion is a vital and powerful tool that not only promotes positive emotional responses; 
-      but has been scientifically proven to benefit human physiology. Growing research has shown that 
-      the act of giving and receiving compassion is an excellent tool in calming physiological responses
-      to stress and reducing patient mortality rates.</p>
+        but has been scientifically proven to benefit human physiology. Growing research has shown that 
+        the act of giving and receiving compassion is an excellent tool in calming physiological responses
+        to stress and reducing patient mortality rates.</p>
 
-      <h3>What is Compassion?</h3>
-      <p>According to Stephen Trzeciak in the text “Compassionomics”, compassion is the emotional response 
-      to another’s pain or suffering, involving an authentic desire to help. (Trzeciak, 2019)</p>
+      <div class="highlight-box">
+        <h3>What is Compassion?</h3>
+        <p>According to Stephen Trzeciak in the text <em>“Compassionomics”</em>, Compassion is the emotional response to another’s pain or suffering, involving an authentic desire to help. (Trzeciak, 2019)</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>What is Physiology?</h3>
+        <p>Physiology is the study of the mechanism of living things. Research in this field aims to build an understanding of how the body operates when in health and when in disease. (What is physiology? 2025)</p>
+        <p>This website intends to highlight the important link between acts of compassion and positive physiological responses.</p>
+        <a href="https://www.physoc.org/explore-physiology/what-is-physiology/" target="_blank">Learn more about Physiology</a>
+      </div>
     </div>
+
     <div class="image">
       <img src="doctor-9628974.jpg" class="section-img">
+      <!-- Add more images here as needed -->
+      <!-- <img src="another-image.jpg" class="section-img"> -->
     </div>
   </div>
 </div>

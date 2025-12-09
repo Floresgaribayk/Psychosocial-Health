@@ -24,40 +24,40 @@ body {
 
 /* HEADER + NAV */
 header {
-  background-color: #a67bca;
+  background: linear-gradient(90deg, #7b5fc0, #a67bca);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
   flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
-  font-size: 22px;
+  font-size: 28px;
   margin: 0;
-  font-weight: 600;
-  color: white;
-}
-
-nav {
-  display: flex;
-  gap: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 6px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 nav a:hover {
-  background: #4a148c;
-  text-shadow: 0 0 8px #e0d4f7;
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 8px rgba(255,255,255,0.5);
+  transform: scale(1.05);
 }
-
 /* HAMBURGER MENU BUTTON */
 .hamburger {
   display: none;
@@ -67,9 +67,18 @@ nav a:hover {
 }
 
 .hamburger div {
-  width: 25px;
+  width: 30px;       /* adjust width as needed */
   height: 3px;
   background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT FOR NAV LINKS */
+nav a:hover {
+  background: #4a148c;
+  text-shadow: 0 0 8px #e0d4f7;
+}
 }
 
 /* PAGE BOX */

@@ -402,26 +402,36 @@ button:hover {
 
 <!-- PODCAST PAGE -->
 <div id="podcast" class="page">
-  <h2>Podcast</h2>
+  <h2>Podcast Episodes</h2>
 
-  <div class="quiz-container" style="margin-top: 30px;">
+  <div class="episodes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
 
-    <h3 style="font-size: 24px; margin-bottom: 10px;">
-      Listen to Our Podcast Episode Featuring:
-    </h3>
+    <!-- Episode 1 -->
+    <div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Episode 1</h3>
+      <p><strong>G’Aelyn</strong><br>Major: Health Care Administration<br>Minor: Applied Health Sciences</p>
+      <p><strong>Ryan</strong><br>Major: Accounting</p>
+      <p>We discussed compassion—what it looks like, how it feels, and why it matters. Real-life examples and reflections were shared on how compassion shapes health.</p>
+      <img src="https://raw.githubusercontent.com/Floresgaribayk/Psychosocial-Health/main/ai-generated-9390016_1280.jpg" alt="Episode 1 Image" style="width:100%; border-radius: 5px; margin-bottom: 10px;">
+      <audio controls style="width: 100%;">
+        <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/Claudine_Williams_Residence_Hall.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
-    <!-- NAMES -->
-    <p style="font-size: 16px; line-height: 1.6;">
-      <strong>G’Aelyn</strong><br>
-      Major: Health Care Administration<br>
-      Minor: Applied Health Sciences
-    </p>
+    <!-- Episode 2 -->
+    <div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Episode 2</h3>
+      <p><strong>Kawai</strong><br>Major: Kinesiology</p>
+      <p>This episode covers the latest insights on compassion and its impact on physical and mental health.</p>
+      <audio controls style="width: 100%;">
+        <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/UNLV%2018%20copy.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
-    <p style="font-size: 16px; line-height: 1.6;">
-      <strong>Ryan</strong><br>
-      Major: Accounting
-    </p>
-
+  </div>
+</div>
     <!-- SUMMARY (clean, no box) -->
     <p style="font-size: 16px; line-height: 1.7; margin: 20px 0;">
       We decided to ask a few questions regarding compassion—what it looks like, how it feels, and why it matters.

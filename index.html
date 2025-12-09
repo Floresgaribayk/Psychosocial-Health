@@ -11,14 +11,12 @@ body {
   background: linear-gradient(to bottom, #a67bca 0%, #f8f9fa 30%);
   color: #333;
 }
-/* Hanging indent for citations */
 .citation {
   margin-bottom: 15px;
   padding-left: 30px;
   text-indent: -30px;
   line-height: 1.6;
 }
-/* HEADER + NAV */
 header {
   background: linear-gradient(90deg, #7b5fc0, #a67bca);
   display: flex;
@@ -47,11 +45,9 @@ nav a {
   transition: all 0.3s ease;
 }
 nav a:hover {
-  background: rgba(255,255,255,0.2);
-  box-shadow: 0 0 8px rgba(255,255,255,0.6);
-  transform: scale(1.05);
+  background: #4a148c;
+  text-shadow: 0 0 8px #e0d4f7;
 }
-/* HAMBURGER MENU BUTTON */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -65,12 +61,6 @@ nav a:hover {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-/* HOVER EFFECT FOR NAV LINKS */
-nav a:hover {
-  background: #4a148c;
-  text-shadow: 0 0 8px #e0d4f7;
-}
-/* PAGE BOX */
 .page {
   display: none;
   padding: 25px;
@@ -79,12 +69,6 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-/* REMOVE WHITE BOX ON PODCAST PAGE ONLY */
-#podcast.page {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
 }
 .active {
   display: block;
@@ -104,7 +88,6 @@ img.tiny-img {
   display: block;
   margin: 0 auto;
 }
-/* IMAGE SECTION STYLING */
 img.section-img {
   width: 100%;
   max-width: 100%;
@@ -114,7 +97,6 @@ img.section-img {
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   margin-bottom: 15px;
 }
-/* QUIZ STYLING */
 .quiz-container {
   background: #eef2ff;
   border: 2px solid #c7d2fe;
@@ -134,7 +116,6 @@ img.section-img {
   border-radius: 8px;
   border: 1px solid #dbeafe;
 }
-
 button {
   background: #6366f1;
   color: white;
@@ -144,99 +125,47 @@ button {
   cursor: pointer;
   margin-top: 5px;
 }
-
 button:hover {
   background: #4f46e5;
 }
-
 .result {
   font-weight: bold;
   margin-top: 15px;
   color: #312e81;
   text-align: center;
 }
-
-/* Correct/Wrong answer highlights */
 .correct {
   background-color: #d1fae5;
   border-color: #10b981;
 }
-
 .incorrect {
   background-color: #fee2e2;
   border-color: #ef4444;
 }
-
-/* MINI CARDS */
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
-
 .card {
-  background: #f5f3ff;
+  background: linear-gradient(135deg, #f5f3ff, #e8e4ff);
   border: 2px solid #dcd6ff;
   padding: 20px;
   border-radius: 14px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
-
 .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
-
 .card-title {
   font-size: 20px;
   font-weight: bold;
   color: #4a148c;
   margin-bottom: 10px;
 }
-
-/* HOME video styling */
-.welcome-video {
-  margin: 20px auto;
-  max-width: 560px;
-}
-
-/* PEER-REVIEWED LINKS: Glowing text instead of boxed button */
-#peer a.card-button {
-  display: inline-block;
-  color: #A9A9A9;
-  font-weight: 600;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-#peer a.card-button::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background: #d05ce3;
-  opacity: 0.6;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: scaleX(0);
-  transform-origin: right;
-}
-
-#peer a.card-button:hover {
-  color: #f3c5ff;
-  text-shadow: 0 0 8px #d05ce3, 0 0 12px #d05ce3;
-}
-
-#peer a.card-button:hover::after {
-  opacity: 1;
-  transform: scaleX(1);
-  transform-origin: left;
-}
-/* DIVIDER LINE FOR QUIZ HEADER */
 .divider-text {
   display: flex;
   align-items: center;
@@ -244,32 +173,26 @@ button:hover {
   margin: 20px 0;
   gap: 10px;
 }
-
 .divider-text .line {
   flex: 1;
   height: 2px;
   background: #4a148c;
 }
-
 .divider-text .text {
   white-space: nowrap;
   font-weight: bold;
   color: #4a148c;
 }
-
-/* ABOUT PAGE FLEXIBLE LAYOUT */
 .about-container {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   align-items: flex-start;
 }
-
 .about-container .text {
   flex: 1;
   min-width: 250px;
 }
-
 .about-container .image {
   flex: 1;
   min-width: 250px;
@@ -278,7 +201,6 @@ button:hover {
   margin-bottom: 18px;
   line-height: 1.7;
 }
-/* HIGHLIGHT BOXES */
 .highlight-box {
   background: #eef2ff;
   border: 2px solid #c7d2fe;
@@ -286,67 +208,26 @@ button:hover {
   margin: 15px 0;
   border-radius: 10px;
 }
-
-/* MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
-  header h1 {
-    font-size: 18px;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  nav a {
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 5px;
-  }
-
-  img.section-img, img.tiny-img, .welcome-video iframe {
-    width: 100%;
-    height: auto;
-  }
-
-  .page {
-    margin: 15px 10px;
-    padding: 15px;
-  }
-
-  .card-title {
-    font-size: 18px;
-  }
-
-  .quiz-container {
-    padding: 15px;
-  }
-
-  button {
-    width: 100%;
-  }
+  header h1 { font-size: 18px; }
+  nav { display: none; flex-direction: column; width: 100%; margin-top: 10px; }
+  nav.show { display: flex; }
+  .hamburger { display: flex; }
+  nav a { text-align: center; padding: 10px; margin-bottom: 5px; }
+  img.section-img, img.tiny-img, .welcome-video iframe { width: 100%; height: auto; }
+  .page { margin: 15px 10px; padding: 15px; }
+  .card-title { font-size: 18px; }
+  .quiz-container { padding: 15px; }
+  button { width: 100%; }
 }
 </style>
 </head>
-
 <body>
 
 <header>
   <h1>The Physiological Health Benefits of Compassion</h1>
   <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
+    <div></div><div></div><div></div>
   </div>
   <nav id="navMenu">
     <a href="#" onclick="event.preventDefault(); showPage('home')">Home</a>
@@ -362,20 +243,19 @@ button:hover {
 <div id="home" class="page active">
   <h2>Welcome</h2>
   <p>Discover how compassion can improve your physical and mental health.</p>
-  <div class="welcome-videos-container" style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
-  <div style="flex: 1; min-width: 300px;">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/X0_glFODTkE" allowfullscreen></iframe>
+  <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+    <div style="flex:1; min-width:300px;">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/X0_glFODTkE" allowfullscreen></iframe>
+    </div>
+    <div style="flex:1; min-width:300px;">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/R_u37zKLiXI?start=1" allowfullscreen></iframe>
+    </div>
   </div>
-  <div style="flex: 1; min-width: 300px;">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/R_u37zKLiXI?start=1" allowfullscreen></iframe>
-  </div>
-</div>
   <div class="divider-text">
     <span class="line"></span>
     <span class="text">Test Your Compassion Knowledge</span>
     <span class="line"></span>
   </div>
-
   <div class="quiz-container">
     <div class="question">
       <p>1. Compassion increases feelings of psychological:</p>
@@ -403,61 +283,41 @@ button:hover {
 <!-- PODCAST PAGE -->
 <div id="podcast" class="page">
   <h2>Podcast Episodes</h2>
-
-  <!-- SUMMARY AT THE TOP -->
-  <p style="margin-bottom: 20px; font-size: 16px; line-height: 1.7;">
+  <p style="margin-bottom:20px; font-size:16px; line-height:1.7;">
     Compassion is a vital and powerful tool that not only promotes positive emotional responses; 
-        but has been scientifically proven to benefit human physiology. Growing research has shown that 
-        the act of giving and receiving compassion is an excellent tool in calming physiological responses
-        to stress and reducing patient mortality rates</p>
-
-  <!-- EPISODES GRID -->
-  <div class="episodes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-
-    <!-- Episode 1 -->
-    <div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    but has been scientifically proven to benefit human physiology...
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+    <div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px;">
       <h3>Episode 1</h3>
-      <p><strong>G’Aelyn</strong><br>Major: Health Care Administration<br>Minor: Applied Health Sciences</p>
-      <p><strong>Ryan</strong><br>Major: Accounting</p>
-      <img src="https://raw.githubusercontent.com/Floresgaribayk/Psychosocial-Health/main/ai-generated-9390016_1280.jpg" alt="Episode 1 Image" style="width:100%; border-radius: 5px; margin-bottom: 10px;">
-      <audio controls style="width: 100%;">
+      <p><strong>G’Aelyn</strong> - Health Care Administration, Applied Health Sciences</p>
+      <p><strong>Ryan</strong> - Accounting</p>
+      <img src="https://raw.githubusercontent.com/Floresgaribayk/Psychosocial-Health/main/ai-generated-9390016_1280.jpg" alt="Episode 1" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <audio controls style="width:100%;">
         <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/Claudine_Williams_Residence_Hall.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
       </audio>
     </div>
-
-   <!-- Episode 2 -->
-<div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-  <h3>Episode 2</h3>
-  <p><strong>Kawai</strong><br>Major: Kinesiology</p>
-
-  <!-- Image fixed -->
-  <img src="https://raw.githubusercontent.com/Floresgaribayk/Psychosocial-Health/main/cardiogram-5781442_1280.jpg" alt="Episode 2 Image" style="width:100%; border-radius: 5px; margin-bottom: 10px;">
-
-  <!-- Audio player -->
-  <audio controls style="width: 100%;">
-    <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/UNLV%2018%20copy.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
+    <div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px;">
+      <h3>Episode 2</h3>
+      <p><strong>Kawai</strong> - Kinesiology</p>
+      <img src="https://raw.githubusercontent.com/Floresgaribayk/Psychosocial-Health/main/cardiogram-5781442_1280.jpg" alt="Episode 2" style="width:100%; border-radius:5px; margin-bottom:10px;">
+      <audio controls style="width:100%;">
+        <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/UNLV%2018%20copy.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
 </div>
 
 <!-- ABOUT PAGE -->
 <div id="about" class="page">
   <h2>About</h2>
-
   <div class="about-container">
     <div class="text">
-      
-      <p><strong>What is Compassion?</strong> According to Stephen Trzeciak in the text <em>“Compassionomics”</em>, Compassion is the emotional response to another’s pain or suffering, involving an authentic desire to help. (Trzeciak, 2019)</p>
-
-      <p><strong>What is Physiology?</strong> Physiology is the study of the mechanism of living things. Research in this field aims to build an understanding of how the body operates when in health and when in disease. (What is physiology? 2025)</p>
-
-      <p>This website intends to highlight the important link between acts of compassion and positive physiological responses.</p>
-
+      <p><strong>What is Compassion?</strong> According to Stephen Trzeciak in <em>Compassionomics</em>...</p>
+      <p><strong>What is Physiology?</strong> Physiology is the study of the mechanism of living things...</p>
+      <p>This website highlights the link between compassion and positive physiological responses.</p>
       <a href="https://www.physoc.org/explore-physiology/what-is-physiology/" target="_blank">Learn more about Physiology</a>
     </div>
-
     <div class="image">
       <img src="doctor-9628974.jpg" class="section-img">
     </div>
@@ -467,82 +327,99 @@ button:hover {
 <!-- PEER-REVIEWED PAGE -->
 <div id="peer" class="page">
   <h2>Peer-Reviewed Articles</h2>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="card glass-card">
-        <div class="card-title">Compassion and Mental Health (Nature)</div>
-        <p>
-          Behaviors of compassion have been associated with improved levels of happiness and mental well-being, decreased inflammation, and lower risk of cardiovascular events.
-          These physiological health benefits are also associated with reduced levels of loneliness that are mediated by compassion.
-          Behaviors of compassion include: Compassion toward self (CTS) and Compassion toward others (CTO).
-          Higher levels of CTO and CTS were found to be predictors of lower levels of loneliness. Lower levels of loneliness is correlated with improved health outcomes. On the other hand, high levels of loneliness are associated with higher levels of mortality.
-          Performing behaviors of compassion towards oneself and others improves health outcomes through the reduction of loneliness.
-        </p>
-        <a href="https://www.nature.com/articles/s41398-021-01491-8" target="_blank" class="card-button">Read full article</a>
-      </div>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-title">Compassion and Mental Health (Nature)</div>
+      <p>Behaviors of compassion are linked to improved mental health, reduced inflammation...</p>
+      <a href="https://www.nature.com/articles/s41398-021-01491-8" target="_blank" class="card-button">Read Article</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Impact of Compassion on Physiological Health (Springer)</div>
+      <p>High levels of compassion are linked to lower blood pressure and lower risk of hypertension...</p>
+      <a href="https://link.springer.com/article/10.1007/s12529-020-09886-5" target="_blank" class="card-button">Read Article</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Compassion and Stress Recovery (ScienceDirect)</div>
+      <p>Higher compassion can reduce stress effects on blood pressure and cortisol levels...</p>
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022103110000934" target="_blank" class="card-button">Read Article</a>
     </div>
   </div>
 </div>
 
-<!-- SCIENTIFICALLY BASED WEBSITE PAGE -->
+<!-- SCIENCE PAGE -->
 <div id="science" class="page">
-  <h2>Scientifically Based Website</h2>
-  <p>Explore this website to learn more about compassion and health:</p>
-  <a href="https://www.sciencedirect.com/" target="_blank" style="color: #4a148c; text-decoration: underline;">ScienceDirect</a>
+  <h2>Scientifically Based Websites</h2>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-title">Greater Good Science Center – UC Berkeley</div>
+      <p>Research shows kindness and compassion improve heart health, happiness, and emotional balance.</p>
+      <a href="https://ggsc.berkeley.edu/" target="_blank" class="card-button">Visit Website</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Compassion Research Lab</div>
+      <p>Research on compassion and its impact on well-being.</p>
+      <a href="https://www.compassionresearchlab.com" target="_blank" class="card-button">Visit Website</a>
+    </div>
+    <div class="card">
+      <div class="card-title">FACE Projects – Trauma, Compassion & Science</div>
+      <p>The FACE Projects initiative explores trauma, compassion-focused interventions, and psychological safety.</p>
+      <a href="https://www.taskforce.org/face-projects/" target="_blank" class="card-button">Visit Website</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Global Compassion Coalition</div>
+      <p>Raise public awareness about compassion worldwide.</p>
+      <a href="https://www.globalcompassioncoalition.org/" target="_blank" class="card-button">Visit Website</a>
+    </div>
+  </div>
 </div>
 
 <!-- CITATIONS PAGE -->
 <div id="citations" class="page">
   <h2>Citations</h2>
-  <div class="citation">
-    <p>Trzeciak, S. (2019). <em>Compassionomics: The Revolutionary Scientific Evidence that Caring Makes a Difference</em>. Studer Group.</p>
-  </div>
-  <div class="citation">
-    <p>What is physiology? (2025). <a href="https://www.physoc.org/explore-physiology/what-is-physiology/" target="_blank">Physoc.org</a></p>
-  </div>
+  <p class="citation">
+    Care, Compassion, Dignity. (n.d.). The emotional impact of having compassionate bedside care.  
+    <a href="https://www.breezehospiceservices.com/resources/the-emotional-impact-of-having-compassionate-bedside-care" target="_blank">Link</a>
+  </p>
+  <p class="citation">
+    Center For Health & Well-Being. (n.d.). The Science of Compassion: How Kindness Benefits Our Health.  
+    <a href="https://www.ie.edu/center-for-health-and-well-being/blog/the-science-of-compassion-how-kindness-benefits-our-health/" target="_blank">Link</a>
+  </p>
 </div>
 
 <footer>
-  <p>© 2025 Compassion and Physiology Project</p>
+  <img src="Integrated_New_Horz_SOAHS_black.jpg" class="tiny-img">
+  © 2025 The Physiological Health Benefits of Compassion
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById('navMenu').classList.toggle('show');
-}
-
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
-
   const nav = document.getElementById('navMenu');
-  if (nav.classList.contains('show')) nav.classList.remove('show');
+  if(nav.classList.contains('show')) nav.classList.remove('show');
 }
-
-// Quiz functionality
+function toggleMenu() { document.getElementById('navMenu').classList.toggle('show'); }
 function checkQuiz(button) {
   let score = 0;
-
-  const q1 = document.querySelector('input[name="q1"]:checked');
-  const q2 = document.querySelector('input[name="q2"]:checked');
-  const q3 = document.querySelector('input[name="q3"]:checked');
-
-  if (!q1 || !q2 || !q3) {
-    alert("Please answer all questions!");
-    return;
+  const answers = {q1:"connection", q2:"wellbeing", q3:"reward"};
+  for (let q in answers) {
+    const options = document.querySelectorAll(`input[name="${q}"]`);
+    options.forEach(option => {
+      option.disabled = true;
+      option.parentElement.classList.remove('correct','incorrect');
+      if(option.value === answers[q]) option.parentElement.classList.add('correct');
+      if(option.checked && option.value !== answers[q]) option.parentElement.classList.add('incorrect');
+    });
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if(selected && selected.value === answers[q]) score++;
   }
-
-  if (q1.value === "connection") score++;
-  if (q2.value === "wellbeing") score++;
-  if (q3.value === "reward") score++;
-
-  document.getElementById('quizResult').innerText = `You got ${score}/3 correct!`;
+  document.getElementById("quizResult").innerText = `You scored ${score}/${Object.keys(answers).length}.`;
   button.disabled = true;
 }
 </script>
 
 </body>
 </html>
+
 

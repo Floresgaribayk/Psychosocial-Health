@@ -203,24 +203,34 @@ button:hover {
 }
 
 /* BLUE CARDS FOR PEER ARTICLES */
+/* PEER-REVIEWED CARDS: Softer, glassy purple style */
 #peer .card {
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-  color: white;
-  border: none;
+  background: rgba(186, 104, 200, 0.2); /* soft translucent purple */
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  color: #4a148c; /* dark purple text for readability */
+  border: 1px solid rgba(186, 104, 200, 0.4);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#peer .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
 }
 
 #peer .card-title {
-  color: #dbeafe;
+  color: #6a1b9a; /* slightly brighter purple for headings */
 }
 
-#peer a {
-  color: #bfdbfe;
-  font-weight: bold;
-  text-decoration: underline;
+#peer a.card-button {
+  background-color: #9c27b0;
+  color: #fff;
 }
 
-#peer a:hover {
-  color: #ffffff;
+#peer a.card-button:hover {
+  background-color: #7b1fa2;
 }
 
 /* DIVIDER LINE FOR QUIZ HEADER */

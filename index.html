@@ -47,11 +47,9 @@ nav a {
   transition: all 0.3s ease;
 }
 nav a:hover {
-  background: #4a148c;            /* your preferred hover background */
-  text-shadow: 0 0 8px #e0d4f7;  /* text glow */
-  box-shadow: 0 0 8px rgba(255,255,255,0.6); /* optional extra glow */
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
   transform: scale(1.05);
-
 }
 /* HAMBURGER MENU BUTTON */
 .hamburger {
@@ -66,6 +64,11 @@ nav a:hover {
   background-color: white;
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+/* HOVER EFFECT FOR NAV LINKS */
+nav a:hover {
+  background: #4a148c;
+  text-shadow: 0 0 8px #e0d4f7;
 }
 /* PAGE BOX */
 .page {
@@ -346,7 +349,7 @@ button:hover {
     <div></div>
   </div>
   <nav id="navMenu">
-     <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('home')">Home</a>
     <a href="#" onclick="showPage('podcast')">Podcast</a>
     <a href="#" onclick="showPage('about')">About</a>
     <a href="#" onclick="showPage('peer')">Peer-Reviewed Articles</a>
@@ -408,30 +411,31 @@ button:hover {
         the act of giving and receiving compassion is an excellent tool in calming physiological responses
         to stress and reducing patient mortality rates</p>
 
-<div class="episodes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-  <!-- Episode 1 -->
-  <div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <h3>Episode 1</h3>
-    <p><strong>G’Aelyn</strong><br>Major: Health Care Administration<br>Minor: Applied Health Sciences</p>
-    <p><strong>Ryan</strong><br>Major: Accounting</p>
-    <img src="https://raw.githubusercontent.com/Floresgaribayk/Psychosocial-Health/main/ai-generated-9390016_1280.jpg" alt="Episode 1 Image" style="width:100%; border-radius:5px; margin-bottom:10px;">
-    <audio controls style="width:100%;">
-      <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/Claudine_Williams_Residence_Hall.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
-  <!-- Episode 2 -->
-  <div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <h3>Episode 2</h3>
-    <p><strong>Kawai</strong><br>Major: Kinesiology</p>
-    <img src="https://raw.githubusercontent.com/Floresgaribayk/Psychosocial-Health/main/cardiogram-5781442_1280.jpg" alt="Episode 2 Image" style="width:100%; border-radius:5px; margin-bottom:10px;">
-    <audio controls style="width:100%;">
-      <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/UNLV%2018%20copy.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
+  <!-- EPISODES GRID -->
+  <div class="episodes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+
+    <!-- Episode 1 -->
+    <div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Episode 1</h3>
+      <p><strong>G’Aelyn</strong><br>Major: Health Care Administration<br>Minor: Applied Health Sciences</p>
+      <p><strong>Ryan</strong><br>Major: Accounting</p>
+      <img src="https://raw.githubusercontent.com/Floresgaribayk/Psychosocial-Health/main/ai-generated-9390016_1280.jpg" alt="Episode 1 Image" style="width:100%; border-radius: 5px; margin-bottom: 10px;">
+      <audio controls style="width: 100%;">
+        <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/Claudine_Williams_Residence_Hall.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Episode 2 -->
+    <div class="episode-card" style="background: #eef2ff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Episode 2</h3>
+      <p><strong>Kawai</strong><br>Major: Kinesiology</p>
+      <audio controls style="width: 100%;">
+        <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/UNLV%2018%20copy.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 </div>
-  </div>
 <!-- ABOUT PAGE -->
 <div id="about" class="page">
   <h2>About</h2>

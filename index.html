@@ -14,8 +14,8 @@ body {
 /* Hanging indent for citations */
 .citation {
   margin-bottom: 15px;
-  padding-left: 30px;      /* Indent for the entire block */
-  text-indent: -30px;      /* Pull the first line back to the left */
+  padding-left: 30px;
+  text-indent: -30px;
   line-height: 1.6;
 }
 /* HEADER + NAV */
@@ -59,7 +59,7 @@ nav a:hover {
   gap: 4px;
 }
 .hamburger div {
-  width: 30px;       /* adjust width as needed */
+  width: 30px;
   height: 3px;
   background-color: white;
   border-radius: 2px;
@@ -205,7 +205,7 @@ button:hover {
 /* PEER-REVIEWED LINKS: Glowing text instead of boxed button */
 #peer a.card-button {
   display: inline-block;
-  color: #A9A9A9; /* soft purple glow color */
+  color: #A9A9A9;
   font-weight: 600;
   text-decoration: none;
   position: relative;
@@ -227,7 +227,7 @@ button:hover {
 }
 
 #peer a.card-button:hover {
-  color: #f3c5ff; /* brighter glow on hover */
+  color: #f3c5ff;
   text-shadow: 0 0 8px #d05ce3, 0 0 12px #d05ce3;
 }
 
@@ -349,12 +349,12 @@ button:hover {
     <div></div>
   </div>
   <nav id="navMenu">
-    <a href="#" onclick="showPage('home')">Home</a>
-    <a href="#" onclick="showPage('podcast')">Podcast</a>
-    <a href="#" onclick="showPage('about')">About</a>
-    <a href="#" onclick="showPage('peer')">Peer-Reviewed Articles</a>
-    <a href="#" onclick="showPage('science')">Scientifically Based Website</a>
-    <a href="#" onclick="showPage('Citations')">Citations</a>
+    <a href="#" onclick="event.preventDefault(); showPage('home')">Home</a>
+    <a href="#" onclick="event.preventDefault(); showPage('podcast')">Podcast</a>
+    <a href="#" onclick="event.preventDefault(); showPage('about')">About</a>
+    <a href="#" onclick="event.preventDefault(); showPage('peer')">Peer-Reviewed Articles</a>
+    <a href="#" onclick="event.preventDefault(); showPage('science')">Scientifically Based Website</a>
+    <a href="#" onclick="event.preventDefault(); showPage('citations')">Citations</a>
   </nav>
 </header>
 
@@ -431,16 +431,17 @@ button:hover {
   <h3>Episode 2</h3>
   <p><strong>Kawai</strong><br>Major: Kinesiology</p>
 
-  <!-- Image goes here -->
-  <img src="https://github.com/Floresgaribayk/Psychosocial-Health/blob/main/cardiogram-5781442_1280.jpg" alt="Episode 2 Image" style="width:100%; border-radius: 5px; margin-bottom: 10px;">
+  <!-- Image fixed -->
+  <img src="https://raw.githubusercontent.com/Floresgaribayk/Psychosocial-Health/main/cardiogram-5781442_1280.jpg" alt="Episode 2 Image" style="width:100%; border-radius: 5px; margin-bottom: 10px;">
 
-  <!-- Audio player goes below -->
+  <!-- Audio player -->
   <audio controls style="width: 100%;">
     <source src="https://github.com/Floresgaribayk/Psychosocial-Health/raw/main/UNLV%2018%20copy.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
 </div>
+
 <!-- ABOUT PAGE -->
 <div id="about" class="page">
   <h2>About</h2>
@@ -462,7 +463,9 @@ button:hover {
     </div>
   </div>
 </div>
- <div id="peer" class="page">
+
+<!-- PEER-REVIEWED PAGE -->
+<div id="peer" class="page">
   <h2>Peer-Reviewed Articles</h2>
 
   <div class="timeline">
@@ -476,177 +479,39 @@ button:hover {
           Higher levels of CTO and CTS were found to be predictors of lower levels of loneliness. Lower levels of loneliness is correlated with improved health outcomes. On the other hand, high levels of loneliness are associated with higher levels of mortality.
           Performing behaviors of compassion towards oneself and others improves health outcomes through the reduction of loneliness.
         </p>
-        <a href="https://www.nature.com/articles/s41398-021-01491-8" target="_blank" class="card-button">Read Article</a>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="card glass-card">
-        <div class="card-title">The Impact of Compassion on Physiological Health (Springer)</div>
-        <p>
-          Compassion involves a combination of empathy and action. To display compassion, one must feel concern for another's suffering and take action to alleviate it. 
-          High levels of compassion are linked to lower levels of diastolic and systolic blood pressure in adulthood and a lower risk for hypertension.
-          Maintaining lower systolic blood pressure is significant because it is linked to a lower risk for cardiovascular events, such as coronary heart disease, stroke, and heart failure.
-          High compassion is linked with a lower risk of eating-related problem behaviors, alcohol use, and smoking, all of which are risk factors for higher blood pressure.
-        </p>
-        <a href="https://link.springer.com/article/10.1007/s12529-020-09886-5" target="_blank" class="card-button">Read Article</a>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="card glass-card">
-        <div class="card-title">Compassion and Stress Recovery Mechanisms (ScienceDirect)</div>
-        <p>
-          Higher levels of compassion can lessen the physiological effects of stress. The physiological factors relating to stress include blood pressure and cortisol. 
-          Participants completed an online assessment of compassion, and were exposed to a social stress task. Their blood pressure and cortisol were monitored.
-          Showing compassion for others shielded the individual’s physiological reactivity to stress. Higher levels of compassion were associated with lower blood pressure reactivity and lower cortisol reactivity.
-        </p>
-        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022103110000934" target="_blank" class="card-button">Read Article</a>
+        <a href="https://www.nature.com/articles/s41398-021-01491-8" target="_blank" class="card-button">Read full article</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SCIENCE PAGE -->
+<!-- SCIENTIFICALLY BASED WEBSITE PAGE -->
 <div id="science" class="page">
-  <h2>Scientifically Based Websites</h2>
-
-  <div class="timeline">
-
-    <!-- Greater Good Science Center -->
-    <div class="timeline-item">
-      <div class="card glass-card">
-        <div class="card-title">Greater Good Science Center – UC Berkeley</div>
-        <p>Compassion and kindness improve happiness and health. Research shows that showing or receiving kindness releases chemicals that boost mood and calm stress. Being compassionate can improve heart health, lower blood pressure, and support emotional balance.</p>
-        <a href="https://ggsc.berkeley.edu/" target="_blank" class="card-button">Visit Website</a>
-      </div>
-    </div>
-
-    <!-- Compassion Research Lab -->
-    <div class="timeline-item">
-      <div class="card glass-card">
-        <div class="card-title">Compassion Research Lab</div>
-        <p>Research on compassion and its impact on well-being.</p>
-        <a href="https://www.compassionresearchlab.com" target="_blank" class="card-button">Visit Website</a>
-      </div>
-    </div>
-
-    <!-- FACE Projects -->
-    <div class="timeline-item">
-      <div class="card glass-card">
-        <div class="card-title">FACE Projects – Trauma, Compassion & Science</div>
-        <p>The FACE Projects initiative explores how trauma, compassion-focused interventions, and psychological safety influence human well-being. Their research integrates neuroscience, psychology, and compassion science to improve health outcomes.</p>
-        <a href="https://www.taskforce.org/face-projects/" target="_blank" class="card-button">Visit Website</a>
-      </div>
-    </div>
-
-    <!-- Global Compassion Coalition -->
-    <div class="timeline-item">
-      <div class="card glass-card">
-        <div class="card-title">The Global Compassion Coalition</div>
-        <p>Raise public awareness about compassion.</p>
-        <a href="https://www.globalcompassioncoalition.org/" target="_blank" class="card-button">Visit Website</a>
-      </div>
-    </div>
-
-  </div>
+  <h2>Scientifically Based Website</h2>
+  <p>Explore this website to learn more about compassion and health:</p>
+  <a href="https://www.sciencedirect.com/" target="_blank" style="color: #4a148c; text-decoration: underline;">ScienceDirect</a>
 </div>
-<!-- Additional CSS for icons and hover effect -->
-<style>
-.card {
-  background: linear-gradient(135deg, #f5f3ff, #e8e4ff);
-  border: 2px solid #dcd6ff;
-  padding: 20px;
-  border-radius: 14px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-}
-
-.card-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #4a148c;
-  margin-bottom: 10px;
-}
-
-.card-title svg.icon {
-  width: 24px;
-  height: 24px;
-  color: #ff6b6b; /* choose color that fits your theme */
-}
-</style>
 
 <!-- CITATIONS PAGE -->
-<div id="Citations" class="page">
+<div id="citations" class="page">
   <h2>Citations</h2>
-
-  <p class="citation">
-    Care, Compassion, Dignity. (n.d.). The emotional impact of having compassionate bedside care.  
-    <a href="https://www.breezehospiceservices.com/resources/the-emotional-impact-of-having-compassionate-bedside-care" target="_blank">https://www.breezehospiceservices.com/resources/the-emotional-impact-of-having-compassionate-bedside-care</a>
-  </p>
-
-  <p class="citation">
-    Center For Health & Well-Being. (n.d.). The Science of Compassion: How Kindness Benefits Our Health.  
-    <a href="https://www.ie.edu/center-for-health-and-well-being/blog/the-science-of-compassion-how-kindness-benefits-our-health/" target="_blank">https://www.ie.edu/center-for-health-and-well-being/blog/the-science-of-compassion-how-kindness-benefits-our-health/</a>
-  </p>
-
-  <p class="citation">
-    Cosley, B. J., McCoy, S. K., Saslow, L. R., & Epel, E. S. (2010). Is compassion for others stress buffering? Consequences of compassion and social support for physiological reactivity to stress.  
-    <em>Journal of Experimental Social Psychology, 46</em>(5), 816–823.  
-    <a href="https://doi.org/10.1016/j.jesp.2010.04.008" target="_blank">https://doi.org/10.1016/j.jesp.2010.04.008</a>
-  </p>
-
-  <p class="citation">
-    Greater Good. (2025). The science of a meaningful life.  
-    <a href="https://greatergood.berkeley.edu/" target="_blank">https://greatergood.berkeley.edu/</a>
-  </p>
-
-  <p class="citation">
-    Malenfant, S., Jaggi, P., Hayden, K. A., & Sinclair, S. (2022). Compassion in healthcare: An updated scoping review of the literature.  
-    <em>BMC Palliative Care, 21</em>(1), 80.  
-    <a href="https://doi.org/10.1186/s12904-022-00942-3" target="_blank">https://doi.org/10.1186/s12904-022-00942-3</a>
-  </p>
-
-  <p class="citation">
-    Pixabay. (n.d.). Download AI generated, X-ray, skeleton. royalty-free stock illustration image.  
-    <a href="https://pixabay.com/illustrations/ai-generated-x-ray-skeleton-dreams-8710884/" target="_blank">https://pixabay.com/illustrations/ai-generated-x-ray-skeleton-dreams-8710884/</a>
-  </p>
-
-  <p class="citation">
-    Saarinen, A. I. L., et al. (2020). Does compassion predict blood pressure and hypertension?  
-    <em>International Journal of Behavioral Medicine, 27</em>(5), 527–538.  
-    <a href="https://doi.org/10.1007/s12529-020-09886-5" target="_blank">https://doi.org/10.1007/s12529-020-09886-5</a>
-  </p>
-
-  <p class="citation">
-    The Global Compassion Coalition. (2025, November 17). Global Compassion Coalition.  
-    <a href="https://www.globalcompassioncoalition.org/" target="_blank">https://www.globalcompassioncoalition.org/</a>
-  </p>
-
-  <p class="citation">
-    The Physiological Society. (2023, October 16). What is physiology?  
-    <a href="https://www.physoc.org/explore-physiology/what-is-physiology/" target="_blank">https://www.physoc.org/explore-physiology/what-is-physiology/</a>
-  </p>
-
-  <p class="citation">
-    Wellnow. (n.d.). Why compassion in patient care creates better outcomes for everyone.  
-    <a href="https://careers.wellnow.com/us/en/blogarticle/why-compassion-in-patient-care-creates-better-outcomes-for-everyone" target="_blank">https://careers.wellnow.com/us/en/blogarticle/why-compassion-in-patient-care-creates-better-outcomes-for-everyone</a>
-  </p>
+  <div class="citation">
+    <p>Trzeciak, S. (2019). <em>Compassionomics: The Revolutionary Scientific Evidence that Caring Makes a Difference</em>. Studer Group.</p>
+  </div>
+  <div class="citation">
+    <p>What is physiology? (2025). <a href="https://www.physoc.org/explore-physiology/what-is-physiology/" target="_blank">Physoc.org</a></p>
+  </div>
 </div>
+
 <footer>
-  <img src="Integrated_New_Horz_SOAHS_black.jpg" class="tiny-img">
-  © 2025 The Physiological Health Benefits of Compassion
+  <p>© 2025 Compassion and Physiology Project</p>
 </footer>
 
 <script>
+function toggleMenu() {
+  document.getElementById('navMenu').classList.toggle('show');
+}
+
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
@@ -656,32 +521,28 @@ function showPage(id) {
   if (nav.classList.contains('show')) nav.classList.remove('show');
 }
 
-function toggleMenu() {
-  document.getElementById('navMenu').classList.toggle('show');
-}
-
+// Quiz functionality
 function checkQuiz(button) {
   let score = 0;
-  const answers = {q1:"connection", q2:"wellbeing", q3:"reward"};
 
-  for (let q in answers) {
-    const options = document.querySelectorAll(`input[name="${q}"]`);
-    options.forEach(option => {
-      option.disabled = true;
-      option.parentElement.classList.remove('correct', 'incorrect');
-      if (option.value === answers[q]) option.parentElement.classList.add('correct');
-      if (option.checked && option.value !== answers[q]) option.parentElement.classList.add('incorrect');
-    });
+  const q1 = document.querySelector('input[name="q1"]:checked');
+  const q2 = document.querySelector('input[name="q2"]:checked');
+  const q3 = document.querySelector('input[name="q3"]:checked');
 
-    const selected = document.querySelector(`input[name="${q}"]:checked`);
-    if (selected && selected.value === answers[q]) score++;
+  if (!q1 || !q2 || !q3) {
+    alert("Please answer all questions!");
+    return;
   }
 
-  const total = Object.keys(answers).length;
-  document.getElementById("quizResult").innerText = `You scored ${score}/${total}.`;
+  if (q1.value === "connection") score++;
+  if (q2.value === "wellbeing") score++;
+  if (q3.value === "reward") score++;
+
+  document.getElementById('quizResult').innerText = `You got ${score}/3 correct!`;
   button.disabled = true;
 }
 </script>
 
 </body>
 </html>
+
